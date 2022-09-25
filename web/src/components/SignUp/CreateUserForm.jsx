@@ -5,7 +5,6 @@
 
  import React from "react";
  import Button from "@mui/material/Button";
- import Select from "@mui/material/Select";
  import Box from "@mui/material/Box";
  import Grid from "@mui/material/Grid";
  import Typography from '@mui/material/Typography';
@@ -67,15 +66,6 @@
              label={props.label}
              name={props.name}
          />
-     );
- }
- 
- 
- const SubmitButton = () => {
-     return(
-         <div className="button-container">
-         <Button variant="contained" color="success">Submit</Button>
-         </div>
      );
  }
  
