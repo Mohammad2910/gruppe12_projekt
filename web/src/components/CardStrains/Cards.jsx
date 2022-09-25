@@ -4,6 +4,7 @@ import './Cards.css';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 
+import { strainStore } from '../../stores/StrainStore'
 
 function Cards() {
     return(
@@ -14,34 +15,16 @@ function Cards() {
                     <ul className="cards__strains">
                         <Box sx={{ flexGrow:1}}>
                             <Grid container spacing = {2} >
-                                <Grid item sm={12} md={6} lg={4}>
+                                {strainStore.strains.map((strain) => {
+                                    return (
+                                    <Grid item sm={12} md={6} lg={4}>
                                     <CardStrain
-                                        strainTitle = 'AAAAAAAAAAAAAAAAAAA'
-                                        src ={"./images.jpg"}
-                                        strainInfo = 'this is the strain info'
+                                        strainTitle = {strain.title}
+                                        src = {strain.src}
+                                        strainInfo = {strain.strainInfo}
                                     />
-                                </Grid>
-                                <Grid item sm={12} md={6} lg={4}>
-                                    <CardStrain
-                                        strainTitle = 'BBBBBBBBBBBBBBBBBBBB'
-                                        src ={"./images.jpg"}
-                                        strainInfo = 'this is the strain info'
-                                    />
-                                </Grid>
-                                <Grid item sm={12} md={6} lg={4}>
-                                    <CardStrain
-                                        strainTitle = 'CCCCCCCCCCCCCCCCC CCCCCCCCCCCCCC CCCCCCCCC'
-                                        src ={"./images.jpg"}
-                                        strainInfo = 'this is the strain info'
-                                    />
-                                </Grid>
-                                <Grid item sm={12} md={6} lg={4}>
-                                    <CardStrain
-                                        strainTitle = 'DDDDDDDDDDDDDDDDDDD'
-                                        src ={"./images.jpg"}
-                                        strainInfo = 'this is the strain infohis is the strain infohis is the strain infohis is the strain infohis is the strain info'
-                                    />
-                                </Grid>
+                                    </Grid>)
+                                })}
                             </Grid>
                         </Box>
                     </ul>

@@ -23,7 +23,7 @@ const SideGrid = (props) => { // remove props later
                 {props.data.map((data) => {
                     return (
                         <div className='item'>
-                            <Link underline='hover' to={data.link}>
+                            <Link underline='hover' to=''>
                                 {data.title}
                             </Link>
                         </div>
