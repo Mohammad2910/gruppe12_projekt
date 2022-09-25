@@ -9,7 +9,7 @@ import { strainStore } from '../../stores/StrainStore'
 function Cards() {
     return(
         <div className={"cards"}>
-            <h1> Check out these epic strains</h1>
+            <h1>Strains</h1>
             <div className="cards__container">
                 <div className="cards__wrapper">
                     <ul className="cards__strains">
