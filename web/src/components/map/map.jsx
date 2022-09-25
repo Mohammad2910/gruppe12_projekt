@@ -1,7 +1,5 @@
 import React, {Component} from "react";
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
-import {Icon} from "@mui/material";
-import locationIcon from "@iconify/icons-mdi/map-marker";
 import "./style.css"
 
 const mapStyles = {
