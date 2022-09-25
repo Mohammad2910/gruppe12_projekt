@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
@@ -9,7 +9,7 @@ const Navbar = () => {
                         <Link className="navbar-brand" to='/home'>
                             <img
                                 src="https://cdn2.excelsior.com.mx/media/styles/image800x600/public/pictures/2019/04/09/2128709.jpg"
-                                className="rounded-circle" width="45" height="40"/>
+                                className="rounded-circle" width="45" height="40" alt=""/>
                         </Link>
                         <button className="navbar-toggler"
                                 type="button"

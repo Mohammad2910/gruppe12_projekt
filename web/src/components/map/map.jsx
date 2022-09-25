@@ -10,12 +10,12 @@ const mapStyles = {
     position: 'relative'
 };
 
-const LocationPin = ({ text }) => (
-    <div className="pin">
-        <Icon icon={locationIcon} className="pin-icon" />
-        <p className="pin-text">{text}</p>
-    </div>
-)
+// const LocationPin = ({ text }) => (
+//     <div className="pin">
+//         <Icon icon={locationIcon} className="pin-icon" />
+//         <p className="pin-text">{text}</p>
+//     </div>
+// )
 
 export class MapContainer extends Component {
     state = {

@@ -1,6 +1,5 @@
 import SideGrid from "../../components/SideGrid";
 import MapContainer from "../../components/map/map";
-import Grid from "@mui/material/Grid";
 
 import './style.css';
 
