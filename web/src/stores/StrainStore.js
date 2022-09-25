@@ -3,23 +3,23 @@ import { makeObservable, observable } from "mobx"
 class StrainStore {
     strains = [
         {
-            title: 'Strain12345632455',
-            src: "./images.jpg",
+            title: 'Indica',
+            src: "./images.webp",
             strainInfo: 'this is the strain info'
         },
         {
-            title: 'Strain112364',
-            src: "./images.jpg",
+            title: 'Sativa',
+            src: "./images.webp",
             strainInfo: 'this is the strain info'
         },
         {
-            title: 'Strain132467',
-            src: "./images.jpg",
+            title: 'Hybrid',
+            src: "./images.webp",
             strainInfo: 'this is the strain info'
         },
         {
-            title: 'Strain142134',
-            src: "./images.jpg",
+            title: 'strain',
+            src: "./images.webp",
             strainInfo: 'this is the strain info'
         }
     ]
