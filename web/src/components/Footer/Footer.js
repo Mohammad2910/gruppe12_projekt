@@ -61,16 +61,16 @@ class Footer extends Component {
                     </div>
 
                     <hr className="mb-3 mt-5"/>
-                    {/*<div className="row d-flex justify-content-center">*/}
-                    {/*    <div className="text-center">*/}
-                    {/*        <p>*/}
-                    {/*            Copyright &copy; {new Date().getFullYear()} All Rights Reserved by:*/}
-                    {/*            <a href="#" className="text-white text-decoration-none">*/}
-                    {/*                <strong> Group 12</strong>*/}
-                    {/*            </a>*/}
-                    {/*        </p>*/}
-                    {/*    </div>*/}
-                    {/*</div>*/}
+                    <div className="row d-flex justify-content-center">
+                        <div className="text-center">
+                            <p>
+                                Copyright &copy; {new Date().getFullYear()} All Rights Reserved by:
+                               {/* <a href="#" className="text-white text-decoration-none"> </a>*/}
+                                    <strong> Group 12</strong>
+
+                            </p>
+                        </div>
+                    </div>
 
                     {/*<div className="row d-flex justify-content-center">*/}
                     {/*    <div className="text-center">*/}
