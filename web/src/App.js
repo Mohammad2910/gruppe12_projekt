@@ -1,47 +1,43 @@
-import React from 'react'
-import { Route, BrowserRouter, Routes } from 'react-router-dom'
+import logo from './logo.svg';
 
-import './App.css'
-import Frontpage from './pages/Frontpage'
-import Strainpage from './pages/Strainpage'
-import Distributor from './pages/Distributor'
-import LoginForm from './components/SignIn/LoginForm'
-import SignupForm from './components/SignUp/CreateUserForm'
-import Navbar from './components/Navbar/Navbar'
-import Footer from './components/Footer/Footer'
+import './App.css';
+import {useState} from "react";
+import Cards from "./components/Cards";
 
-function App() {
 
-  return (
-    <>
-      <BrowserRouter basename='/gruppe12_projekt'>
-          <div className="App">
-              <Routes>
-                  <Route exact path='/' element={<LoginForm/>} />
-                  <Route exact path='/signup' element={<SignupForm/>}/>
-                  <Route path='*' element={<DefaultContainer/>} />
-              </Routes>
-          </div>
-      </BrowserRouter>
-    </>
- )
+const Greeting = ({username}) => {
+  return (<h1>Hello, {username}</h1>)
 }
 
-const DefaultContainer = () => (
-    <div>
-        <div className="container">
-            <Navbar />
-            <main>
-                <Routes>
-                    <Route path="/home" element={<Frontpage/>}/>
-                    <Route path="/strains" element={<Strainpage/>} />
-                    <Route path="/distributor" element={<Distributor/>} />
-                    {/*<Route path="/*" element={<h1>Error</h1>} />*/}
-                </Routes>
-            </main>
-            <Footer/>
-        </div>
-    </div>
-)
 
-export default App
+
+
+// function Strains(props) {
+//     return(
+//     <div className={"Strain"}>
+//         <div className={"StrainTitle"}>{props.strainTitle} </div>
+//         <div className={"Body1"}>
+//             <img className={"PicStrain"} src ={"./images.jpg"} alt={"I"} width={100} height={100}/>
+//             <p className={"InfoStrain"}>{props.strainInfo}</p>
+//         </div>
+//     </div>
+//     )
+// }
+
+
+const indicaInfo = "this is the information about the indica strain"
+function App() {
+    //const strainInformation = {strainTitle: "indica", info: indicaInfo};
+    //const strainInformation2 = {strainTitle: "sativa", info: "more information"};
+  return (
+
+      <Cards/>
+      /*<div className="App">
+        <Strains strainTitle={strainInformation.strainTitle} strainInfo ={strainInformation.info}/>
+        <Strains strainTitle={strainInformation2.strainTitle} strainInfo ={strainInformation2.info}/>
+    </div>
+       */
+  );
+}
+
+export default App;
