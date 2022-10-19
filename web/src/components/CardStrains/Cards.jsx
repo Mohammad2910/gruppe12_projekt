@@ -1,8 +1,7 @@
 import React from "react";
 import CardStrain from "./CardStrain";
 import './Cards.css';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
+
 
 import { strainStore } from '../../stores/StrainStore'
 
