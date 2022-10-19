@@ -8,3 +8,5 @@ RUN yarn build
 
 COPY --from=REACT /web/build ./src/main/webapp/
 EXPOSE 8080
+
+RUN yarn run
