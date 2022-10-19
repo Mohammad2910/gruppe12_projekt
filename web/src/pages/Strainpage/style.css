@@ -2,6 +2,6 @@
     .strains {
         display: grid;
         grid-template-columns: 2fr 7fr;
-        column-gap: 4px;
+
     }   
 }
