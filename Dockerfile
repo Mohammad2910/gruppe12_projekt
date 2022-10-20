@@ -3,7 +3,7 @@ WORKDIR /web
 COPY /web/package.json  ./
 COPY /web/src ./src
 COPY /web/public ./public
-RUN npm install
+RUN yarn install
 RUN yarn build
 
 COPY --from=REACT ./web/build ./src/main/webapp/
