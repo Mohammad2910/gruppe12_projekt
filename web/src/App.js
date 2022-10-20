@@ -9,6 +9,7 @@ import LoginForm from './components/SignIn/LoginForm'
 import SignupForm from './components/SignUp/CreateUserForm'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
+import SingleStrain from './components/SingleStrainPage/SingleStrainPage'
 
 function App() {
 
@@ -36,6 +37,7 @@ const DefaultContainer = () => (
                     <Route path="/home" element={<Frontpage/>}/>
                     <Route path="/strains" element={<Strainpage/>} />
                     <Route path="/distributor" element={<Distributor/>} />
+                    <Route path="/strains/purp" element={<SingleStrain/>} />
                     {/*<Route path="/*" element={<h1>Error</h1>} />*/}
                 </Routes>
             </main>
