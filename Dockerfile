@@ -6,4 +6,4 @@ COPY /web/public ./public
 RUN yarn install
 RUN yarn build
 
-EXPOSE 8080
+-p 8080:8080
