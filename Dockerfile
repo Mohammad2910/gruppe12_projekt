@@ -1,6 +1,6 @@
 FROM node:18-slim AS REACT
 WORKDIR /web
-RUN npm install --force
+RUN npm install
 COPY /web/package.json  ./
 COPY /web/src ./src
 COPY /web/public ./public
