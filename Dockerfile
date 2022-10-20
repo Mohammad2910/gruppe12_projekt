@@ -1,6 +1,6 @@
 FROM node:18-slim AS REACT
 WORKDIR /web
-RUN yarn install
+RUN npm install --force
 COPY ./package.json  ./
 COPY ./src ./src
 COPY ./public ./public
