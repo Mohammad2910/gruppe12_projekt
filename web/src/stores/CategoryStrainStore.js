@@ -1,19 +1,22 @@
 import { makeObservable, observable } from "mobx"
 
-class StrainStore {
-    strains = [
+class CategoryStrainStore {
+    categoryStrain = [
         {
+            type : "Indica",
             title: 'Indica',
             src: "./images.webp",
             strainInfo: 'this is the strain info'
         },
         {
-            title: 'Sativa',
+            type : "Indica",
+            title: 'Haze',
             src: "./images.webp",
             strainInfo: 'this is the strain info'
         },
         {
-            title: 'Hybrid',
+            type : "Sativa",
+            title: 'Sour',
             src: "./images.webp",
             strainInfo: 'this is the strain info'
         },
@@ -21,9 +24,9 @@ class StrainStore {
 
     constructor() {
         makeObservable(this, {
-            strains: observable,
+            categoryStrain: observable,
         })
     }
 }
 
-export const strainStore = new StrainStore()
+export const  categoryStrainStore= new CategoryStrainStore()

@@ -15,7 +15,7 @@ function Cards() {
                                 <div className="col-sm-4">
                                     <div className="card">
                                         <div className="card-body">
-                                            <Link to={`/strains/${strain.title}`}>
+                                            <Link to={`/strains/category/${strain.title}`}>
                                                 <CardStrain
                                                     strainTitle = {strain.title}
                                                     src = {strain.src}
