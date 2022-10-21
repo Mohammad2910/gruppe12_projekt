@@ -9,7 +9,7 @@ import {Link} from "react-router-dom";
 function Cards() {
     return(
         <div className="row">
-                        {strainStore.strains.map((strain) => {
+                        {strainStore.strains.map((strain) =>  {
                             return (
 
                                 <div className="col-sm-4">
@@ -27,7 +27,7 @@ function Cards() {
                                 </div>
 
                                 )
-                        })}
+                        } )}
         </div>
     )
 }

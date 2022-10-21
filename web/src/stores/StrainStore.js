@@ -3,7 +3,7 @@ import { makeObservable, observable } from "mobx"
 class StrainStore {
     strains = [
         {
-            title: 'Indica',
+            title: 'Purple Kush',
             src: "./images.webp",
             strainInfo: 'this is the strain info'
         },

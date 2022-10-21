@@ -4,7 +4,7 @@ class SingleStrainStore {
     singleStrain = [
         {
             id : 1,
-            title: 'Indica',
+            title: 'Purple Kush',
             src: "./images.webp",
             strainInfo: 'this is the strain info',
             rating: 3,

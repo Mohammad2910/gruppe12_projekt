@@ -11,6 +11,8 @@ import { singleStrainStore } from '../../stores/SingleStrainStore'
 
 function SingleStrainPage(props) {
 
+    const { id } = useParams();
+    const data = singleStrainStore.singleStrain.find((obj => {return obj.title ===id}))
 
     return(
 
@@ -18,7 +20,7 @@ function SingleStrainPage(props) {
             <Grid container spacing ={2}>
                 <Grid item sm={12} md={6}>
                     <Typography  className={"StrainTitle" } variant ={"h3"} sx={{ cursor: 'pointer' }}>
-                        Purple kush
+                        {data.title}
                     </Typography >
                     <img className={"PicStrain"} src ={"../images.webp"} alt={""} width={300} height={300}  class={"center"}/>
                 </Grid>
