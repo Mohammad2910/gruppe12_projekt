@@ -4,23 +4,28 @@ import './Cards.css';
 
 
 import { strainStore } from '../../stores/StrainStore'
+import {Link} from "react-router-dom";
 
 function Cards() {
     return(
         <div className="row">
                         {strainStore.strains.map((strain) => {
                             return (
+
                                 <div className="col-sm-4">
                                     <div className="card">
                                         <div className="card-body">
-                                    <CardStrain
-                                        strainTitle = {strain.title}
-                                        src = {strain.src}
-                                        strainInfo = {strain.strainInfo}
-                                    />
+                                            <Link to={`/strains/${strain.title}`}>
+                                                <CardStrain
+                                                    strainTitle = {strain.title}
+                                                    src = {strain.src}
+                                                    strainInfo = {strain.strainInfo}
+                                                />
+                                            </Link>
                                         </div>
                                     </div>
                                 </div>
+
                                 )
                         })}
         </div>

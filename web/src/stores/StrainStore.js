@@ -17,11 +17,6 @@ class StrainStore {
             src: "./images.webp",
             strainInfo: 'this is the strain info'
         },
-        {
-            title: 'strain',
-            src: "./images.webp",
-            strainInfo: 'this is the strain info'
-        }
     ]
 
     constructor() {

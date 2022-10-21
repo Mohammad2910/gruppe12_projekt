@@ -37,7 +37,8 @@ const DefaultContainer = () => (
                     <Route path="/home" element={<Frontpage/>}/>
                     <Route path="/strains" element={<Strainpage/>} />
                     <Route path="/distributor" element={<Distributor/>} />
-                    <Route path="/strains/purp" element={<SingleStrain/>} />
+
+                    <Route path="/strains/:id" element={<SingleStrain/>}/>
                     {/*<Route path="/*" element={<h1>Error</h1>} />*/}
                 </Routes>
             </main>

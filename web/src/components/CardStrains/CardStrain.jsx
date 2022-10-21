@@ -7,7 +7,7 @@ function CardStrain(props) {
     return(
 
       <div className={"Strain"} >
-          <Link className="nav-link active" to='/strains/purp'>
+
             <Typography  className={"StrainTitle" } sx={{ cursor: 'pointer' }}>
                 {props.strainTitle}
             </Typography >
@@ -15,7 +15,7 @@ function CardStrain(props) {
                 <img className={"PicStrain"} src ={props.src} alt={"I"}  height={100}/>
                 <p className={"InfoStrain"}>{props.strainInfo}</p>
             </div>
-        </Link>
+
         </div>
 
     )

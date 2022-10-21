@@ -5,8 +5,12 @@ import Grid from "@mui/material/Grid";
 import './SingleStrainPage.css';
 import Rating from "@mui/material/Rating";
 import LinearProgress from "@mui/material/LinearProgress";
+import {useParams} from "react-router";
+
+import { singleStrainStore } from '../../stores/SingleStrainStore'
 
 function SingleStrainPage(props) {
+
 
     return(
 
@@ -14,7 +18,7 @@ function SingleStrainPage(props) {
             <Grid container spacing ={2}>
                 <Grid item sm={12} md={6}>
                     <Typography  className={"StrainTitle" } variant ={"h3"} sx={{ cursor: 'pointer' }}>
-                        Purple Kush
+                        Purple kush
                     </Typography >
                     <img className={"PicStrain"} src ={"../images.webp"} alt={""} width={300} height={300}  class={"center"}/>
                 </Grid>
