@@ -2,67 +2,37 @@ import React from "react";
 import CardStrain from "./CardStrain";
 import './Cards.css';
 
-
 import { strainStore } from '../../stores/StrainStore'
 import {Link} from "react-router-dom";
+import Box from "@mui/material/Box";
 
 function Cards() {
     return(
         <div className="row">
-                        {strainStore.strains.map((strain) =>  {
-                            return (
+            {strainStore.strains.map((strain) => {
+                return (
+                    <div className="col-lg-4">
+                        <Box sx={{p: 1}}>
 
-                                <div className="col-sm-4">
-                                    <div className="card">
-                                        <div className="card-body">
-                                            <Link to={`/strains/category/${strain.title}`}>
-                                                <CardStrain
-                                                    strainTitle = {strain.title}
-                                                    src = {strain.src}
-                                                    strainInfo = {strain.strainInfo}
-                                                />
-                                            </Link>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                )
-                        } )}
+                            <Link to={`/strains/category/${strain.title}`}>
+                                <CardStrain
+                                    strainTitle={strain.title}
+                                    src={strain.src}
+                                    origin={strain.origin}
+                                    description={strain.description}
+                                    ratio={strain.ratio}
+                                    effects={strain.effects}
+                                />
+                            </Link>
+                        </Box>
+                    </div>
+                )
+            })}
         </div>
     )
 }
 
 
-// function Cards() {
-//     return(
-//         <div className={"cards"}>
-//             <h1>Strains</h1>
-//             <div className="cards__container">
-//                 <div className="cards__wrapper">
-//                     <ul className="cards__strains">
-//                         <Box sx={{ flexGrow:1}}>
-//                             <Grid container spacing = {2} >
-//                                 {strainStore.strains.map((strain) => {
-//                                     return (
-//                                     <Grid item sm={12} md={6} lg={4}>
-//                                     <CardStrain
-//                                         strainTitle = {strain.title}
-//                                         src = {strain.src}
-//                                         strainInfo = {strain.strainInfo}
-//                                     />
-//                                     </Grid>)
-//                                 })}
-//                             </Grid>
-//                         </Box>
-//                     </ul>
-//                 </div>
-//             </div>
-//
-//         </div>
-//
-//
-//     )
-//}
 
 
 export default Cards

@@ -1,6 +1,5 @@
 import React from "react";
 import Typography from '@mui/material/Typography';
-import {Link} from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import './SingleStrainPage.css';
 import Rating from "@mui/material/Rating";
@@ -22,7 +21,7 @@ function SingleStrainPage(props) {
                     <Typography  className={"StrainTitle" } variant ={"h3"} sx={{ cursor: 'pointer' }}>
                         {data.title}
                     </Typography >
-                    <img className={"PicStrain"} src ={"../images.webp"} alt={""} width={300} height={300}  class={"center"}/>
+                    <img className={"PicStrain"} src ={data.src} alt={""} width={350}  class={"center"}/>
                 </Grid>
                 <Grid item sm={12} md={6}>
                     <Typography component="legend">User Rating</Typography>
@@ -36,7 +35,7 @@ function SingleStrainPage(props) {
                             <p align={"right"}>Energizing</p>
                         </Grid>
                     </Grid>
-                    <LinearProgress variant="determinate" value={80} />
+                    <LinearProgress variant="determinate" value={data.energy} />
                     <br></br>
                     <b>About:</b>
                     <p>

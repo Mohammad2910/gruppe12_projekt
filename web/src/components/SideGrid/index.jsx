@@ -1,9 +1,6 @@
 import React from 'react';
-// import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
 import './style.css';
-
 const SideGrid = (props) => { // remove props later
 
     // const [categories, setCategories] = useState([])
@@ -17,15 +14,25 @@ const SideGrid = (props) => { // remove props later
     //     })
     // },[])
 
+//Why not just reference directly to the strains store instead of props?
     return (
         <div className='wrapper'>
             <div className='container'>
-                {props.data.map((data) => {
+                {props.strains.map((data) => {
                     return (
                         <div className='item'>
-                            <Link underline='hover' to=''>
+                            <Link underline='hover' to={`/strains/category/${data.title}`}>
                                 {data.title}
                             </Link>
+
+                            {props.categories.map((categoryStrain) => {
+                                if (categoryStrain.type === data.title)
+                                    return (
+                                        <Link underline='hover' to={`/strains/${categoryStrain.title}`}>
+                                            <li>{categoryStrain.title}</li>
+                                        </Link>
+                                    )
+                            })}
                         </div>
                     )
                 })}
