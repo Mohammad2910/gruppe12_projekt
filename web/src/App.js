@@ -10,7 +10,6 @@ import SignupForm from './components/SignUp/CreateUserForm'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import SingleStrain from './pages/SingleStrainPage/SingleStrainPage'
-import CategoryStrain from './components/CategoryStrain/CategoryStrain'
 import CategoryStrainpage from "./pages/CategoryStrainpage";
 
 function App() {
