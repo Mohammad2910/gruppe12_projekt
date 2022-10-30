@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter basename='/gruppe12_projekt'>
+      <BrowserRouter>
           <div className="App">
               <Routes>
                   <Route exact path='/' element={<LoginForm/>} />
