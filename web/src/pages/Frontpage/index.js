@@ -20,7 +20,7 @@ const Frontpage = () => {
                                 src="https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                                 className="d-block w-100" alt="..." height="100%"/>
                             <div className="carousel-caption">
-                                <h5 className="animate__slideInDown">Bla.Bla.Bla.</h5>
+                                <h5 className="animate__slideInDown">Hello world!</h5>
                                 <p className="d-none d-md-block animate__fadeInUp">Lorem ipsum dolor sit amet,
                                     consectetur adipisicing
                                     elit. Atque dolores officia quisquam repellat tempore, voluptate!</p>
