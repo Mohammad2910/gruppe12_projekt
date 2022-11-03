@@ -24,10 +24,10 @@ function CardStrain(props) {
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
                         <ul>
-                            <li>{props.origin}</li>
-                            <li>{props.description}</li>
-                            <li>{props.ratio}</li>
-                            <li>{props.effects}</li>
+                            <li key={props.id}>{props.origin}</li>
+                            <li key={props.id}>{props.description}</li>
+                            <li key={props.id}>{props.ratio}</li>
+                            <li key={props.id}>{props.effects}</li>
                         </ul>
                     </Typography>
                 </CardContent>

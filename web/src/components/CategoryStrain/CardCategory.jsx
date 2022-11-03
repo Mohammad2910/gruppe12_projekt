@@ -25,12 +25,6 @@ function CardCategory(props) {
                 height="194"
                 image={props.src}
             />
-            <CardContent>
-                <Typography variant="body2" color="text.secondary">
-                    {props.strainInfo}
-                </Typography>
-
-            </CardContent>
             </CardActionArea>
         </Card>
 

@@ -5,34 +5,35 @@ import {useParams} from "react-router";
 import {singleStrainStore} from "../../stores/SingleStrainStore";
 import CardCategory from "./CardCategory";
 import Box from "@mui/material/Box";
+import { observer } from "mobx-react-lite";
 
-function CategoryStrain() {
+const CategoryStrain = observer(() => {
 
     const { id } = useParams();
-    //const data = singleStrainStore.singleStrain.find((obj => {return obj.title ===id}))
 
     return(
         <div className="row">
-            {singleStrainStore.singleStrain.map((categoryStrain) =>  {
-                if(categoryStrain.type === id)
-                return (
+            {singleStrainStore.singleStrains.map((categoryStrain) =>  {
+                if(categoryStrain.type.id.toString() === id) {
+                    return (
                     <div className="col-lg-4">
                         <Box sx={{p: 1}}>
 
                             <Link to={`/strains/${categoryStrain.title}`}>
                                 <CardCategory
-                                    title={categoryStrain.title}
-                                    src={categoryStrain.src2}
-                                    rating={categoryStrain.rating}
-                                    strainInfo={categoryStrain.strainInfo}
-                                />
-                            </Link>
-                        </Box>
-                    </div>
-                )
+                                        title={categoryStrain.title}
+                                        src={categoryStrain.src}
+                                        rating={categoryStrain.rating}
+                                    />
+                                </Link>
+                            </Box>
+                        </div>
+                    )
+                }
+                return <></>
             } )}
         </div>
     )
-}
+})
 
 export default CategoryStrain
