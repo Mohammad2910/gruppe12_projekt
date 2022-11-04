@@ -36,7 +36,7 @@ jobs:
       - name: Deploy app
         env: 
           APP_NAME: 'frontend'
-          APP_URL: 'https://frontend.grp12.diplomportal.dk'
+          APP_URL: 'https://grp12.diplomportal.dk'
           IMAGE_NAME: 'nafiu/frontend:${{github.run_number}}'
         run: 
          'caprover deploy --caproverUrl=$APP_URL --caproverPassword=${{ secrets.CAPROVER_PASSWORD }} --imageName=$IMAGE_NAME --appName=$APP_NAME'
