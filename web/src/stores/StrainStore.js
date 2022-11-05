@@ -10,7 +10,7 @@ class StrainStore {
     }
 
     fetchStrains() {
-        fetch('http://localhost:8080/api/strains/type')
+        fetch('http://backend.grp12.diplomportal.dk:8080/api/strains/type')
             .then((response) => response.json())
             .then((json) => runInAction(() => this.strains = json))
     };

@@ -1,4 +1,4 @@
-import { makeAutoObservable, runInAction } from "mobx"
+import { makeAutoObservable, runInAction } from "mobx";
 
 class SingleStrainStore {
     singleStrains = []
@@ -9,7 +9,7 @@ class SingleStrainStore {
     }
 
     fetchSingleStrains() {
-        fetch('http://localhost:8080/api/strains')
+        fetch('http://backend.grp12.diplomportal.dk:8080/api/strains')
             .then((response) => response.json())
             .then((json) => runInAction(() => this.singleStrains = json))
     };
