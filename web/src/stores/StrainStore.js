@@ -1,34 +1,19 @@
-import { makeObservable, observable } from "mobx"
+import { makeAutoObservable, runInAction } from "mobx"
 
 class StrainStore {
-    strains = [
-        {
-            title: 'Indica',
-            src: "./images.webp",
-            strainInfo: 'this is the strain info'
-        },
-        {
-            title: 'Sativa',
-            src: "./images.webp",
-            strainInfo: 'this is the strain info'
-        },
-        {
-            title: 'Hybrid',
-            src: "./images.webp",
-            strainInfo: 'this is the strain info'
-        },
-        {
-            title: 'strain',
-            src: "./images.webp",
-            strainInfo: 'this is the strain info'
-        }
-    ]
+
+    strains = []
 
     constructor() {
-        makeObservable(this, {
-            strains: observable,
-        })
+        makeAutoObservable(this,{},{autoBind:true})
+        this.fetchStrains();
     }
+
+    fetchStrains() {
+        fetch('http://localhost:8080/api/strains/type')
+            .then((response) => response.json())
+            .then((json) => runInAction(() => this.strains = json))
+    };
 }
 
 export const strainStore = new StrainStore()
