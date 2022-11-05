@@ -7,14 +7,14 @@ import LinearProgress from "@mui/material/LinearProgress";
 import {useParams} from "react-router";
 
 import { singleStrainStore } from '../../stores/SingleStrainStore'
+import { observer } from "mobx-react-lite";
 
-function SingleStrainPage(props) {
+const SingleStrainPage = observer(() => {
 
     const { id } = useParams();
-    const data = singleStrainStore.singleStrain.find((obj => {return obj.title ===id}))
+    const data = singleStrainStore.singleStrains.find(obj => obj.id.toString() === id)
 
     return(
-
         <div className={"Strain"} >
             <Grid container spacing ={2}>
                 <Grid item sm={12} md={6}>
@@ -51,6 +51,6 @@ function SingleStrainPage(props) {
         </div>
 
     )
-}
+})
 
 export default SingleStrainPage
