@@ -9,7 +9,7 @@ class SingleStrainStore {
     }
 
     fetchSingleStrains() {
-        fetch('https://backend.grp12.diplomportal.dk:8080/api/strains')
+        fetch('https://localhost:8080/api/strains')
             .then((response) => response.json())
             .then((json) => runInAction(() => this.singleStrains = json))
     };
