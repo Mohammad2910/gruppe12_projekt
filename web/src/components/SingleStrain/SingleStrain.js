@@ -13,13 +13,13 @@ function SingleStrainPage(props){
             <Grid container spacing ={2}>
                 <Grid item sm={12} md={6}>
                     <Typography  className={"StrainTitle" } variant ={"h3"} sx={{ cursor: 'pointer' }}>
-                        {props.title}
+                        {props.strain.title}
                     </Typography >
-                    <img className={"PicStrain"} src ={props.src} alt={""} width={350}  class={"center"}/>
+                    <img className={"PicStrain"} src ={props.strain.src} alt={""} width={350}  class={"center"}/>
                 </Grid>
                 <Grid item sm={12} md={6}>
                     <Typography component="legend">User Rating</Typography>
-                    <Rating name="read-only" value={props.rating} readOnly />
+                    <Rating name="read-only" value={props.strain.rating} readOnly />
 
                     <Grid container>
                         <Grid item xs={6}>
@@ -29,16 +29,16 @@ function SingleStrainPage(props){
                             <p align={"right"}>Energizing</p>
                         </Grid>
                     </Grid>
-                    <LinearProgress variant="determinate" value={props.energy} />
+                    <LinearProgress variant="determinate" value={props.strain.energy} />
                     <br></br>
                     <b>About:</b>
                     <p>
-                        {props.description}
+                        {props.strain.description}
                     </p>
                     <br></br>
                     <b>Medical Benefits:</b>
                     <p>
-                        {props.medical}
+                        {props.strain.medical}
                     </p>
                 </Grid>
             </Grid>

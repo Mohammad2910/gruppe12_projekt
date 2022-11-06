@@ -9,7 +9,7 @@ const Cards = (props)  => {
 
     return(
         <div className="row">
-            {props.map((strain) => {
+            {props.strains.map((strain) => {
                 return (
                     <div className="col-lg-4">
                         <Box sx={{p: 1}}>
