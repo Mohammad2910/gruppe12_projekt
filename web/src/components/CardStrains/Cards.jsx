@@ -1,20 +1,18 @@
 import React from "react";
 import CardStrain from "./CardStrain";
 import './Cards.css';
-
-import { strainStore } from '../../stores/StrainStore'
 import {Link} from "react-router-dom";
 import Box from "@mui/material/Box";
-import { observer } from "mobx-react-lite";
 
-const Cards = observer(() => {
+
+const Cards = (props)  => {
+
     return(
         <div className="row">
-            {strainStore.strains.map((strain) => {
+            {props.map((strain) => {
                 return (
                     <div className="col-lg-4">
                         <Box sx={{p: 1}}>
-
                             <Link to={`/strains/category/${strain.id}`}>
                                 <CardStrain
                                     strainTitle={strain.title}
@@ -31,7 +29,7 @@ const Cards = observer(() => {
             })}
         </div>
     )
-})
+}
 
 
 
