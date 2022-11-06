@@ -1,10 +1,8 @@
 import React from "react";
-import Typography from '@mui/material/Typography';
 
 import Card from "@mui/material/Card";
 import CardActionArea from "@mui/material/CardActionArea";
 import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
 
 import CardHeader from "@mui/material/CardHeader";
 import Rating from "@mui/material/Rating/Rating";

@@ -5,6 +5,7 @@ import { singleStrainStore } from '../../stores/SingleStrainStore'
 import { observer } from "mobx-react-lite";
 import Cards from "../../components/CardStrains/Cards";
 import SingleStrain from "../../components/SingleStrain/SingleStrain";
+import { strainStore } from "../../stores/StrainStore";
 
 const SingleStrainPage = observer(() => {
 
@@ -16,7 +17,7 @@ const SingleStrainPage = observer(() => {
         <>
             <div className="strain">
                 <SingleStrain strains={data}/>
-                <Cards/>
+                <Cards strains={strainStore.strains}/>
             </div>
         </>
     )
