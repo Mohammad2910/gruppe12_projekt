@@ -33,6 +33,7 @@ test('Test Distributor ref and name', () => {
     expect(linkElement).toHaveAttribute('href', '/distributor')
 
 });
+
 test('Test profile ref and name', () => {
     render(
         <BrowserRouter>
@@ -40,10 +41,9 @@ test('Test profile ref and name', () => {
         </BrowserRouter>
     );
 
-
-    const linkElement = screen.getByText(/Strains/i);
+    const linkElement = screen.getByText(/Profile/i);
     expect(linkElement).toBeInTheDocument();
-    expect(linkElement).toHaveAttribute('href', '/strains')
+    expect(linkElement).toHaveAttribute('href', '/profile')
 
 });
 
