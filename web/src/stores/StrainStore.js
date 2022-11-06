@@ -10,7 +10,7 @@ class StrainStore {
     }
 
     fetchStrains() {
-        fetch('https://localhost:8080/api/strains/type')
+        fetch('http://grp12.servecounterstrike.com:8080/api/strains/type')
             .then((response) => response.json())
             .then((json) => runInAction(() => this.strains = json))
     };

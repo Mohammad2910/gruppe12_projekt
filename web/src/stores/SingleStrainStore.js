@@ -9,7 +9,7 @@ class SingleStrainStore {
     }
 
     fetchSingleStrains() {
-        fetch('https://localhost:8080/api/strains')
+        fetch('http://grp12.servecounterstrike.com:8080/api/strains')
             .then((response) => response.json())
             .then((json) => runInAction(() => this.singleStrains = json))
     };
