@@ -11,6 +11,7 @@ import { observer } from "mobx-react-lite";
 
 const SingleStrainPage = observer(() => {
 
+    //TODO change this into a page that only calls a copompnent giving the data as a prop
     const { id } = useParams();
     const data = singleStrainStore.singleStrains.find(obj => obj.id.toString() === id)
 
