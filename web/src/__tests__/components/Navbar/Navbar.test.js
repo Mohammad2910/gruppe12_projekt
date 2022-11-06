@@ -16,12 +16,36 @@ test('Test Strain ref and name', () => {
 
     const linkElement = screen.getByText(/Strains/i);
     expect(linkElement).toBeInTheDocument();
-
-
     expect(linkElement).toHaveAttribute('href', '/strains')
 
 });
 
+test('Test Distributor ref and name', () => {
+    render(
+        <BrowserRouter>
+            <Navbar />
+        </BrowserRouter>
+    );
+
+
+    const linkElement = screen.getByText(/Distributor/i);
+    expect(linkElement).toBeInTheDocument();
+    expect(linkElement).toHaveAttribute('href', '/distributor')
+
+});
+test('Test profile ref and name', () => {
+    render(
+        <BrowserRouter>
+            <Navbar />
+        </BrowserRouter>
+    );
+
+
+    const linkElement = screen.getByText(/Strains/i);
+    expect(linkElement).toBeInTheDocument();
+    expect(linkElement).toHaveAttribute('href', '/strains')
+
+});
 
 // test('has login button',()=>{
 //     render(<Navbar/>);
