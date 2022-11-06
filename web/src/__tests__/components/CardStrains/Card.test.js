@@ -7,7 +7,7 @@ import CardStrain from "../../../components/CardStrains/CardStrain";
 
 
 
-test('Test Strain ref and name', () => {
+test('Test card', () => {
 
     const dataStrain = [{
         strainTitle : "TestTitle",

@@ -6,7 +6,7 @@ import {getByLabelText} from '@testing-library/react'
 import '@testing-library/jest-dom'
 
 
-test('Test Strain ref and name', () => {
+test('Test sidegrid title and ref', () => {
 
     const dataStrain = [{
         title : "TestTitle",
