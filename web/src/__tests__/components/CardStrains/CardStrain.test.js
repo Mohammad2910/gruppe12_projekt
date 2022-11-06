@@ -30,7 +30,6 @@ test('Test Strain ref and name', () => {
     const titleElement = screen.getByText(title);
     expect(titleElement).toBeInTheDocument();
 
-    //what to do about the src?
 
     const originElement = screen.getByText(origin);
     expect(originElement).toBeInTheDocument();

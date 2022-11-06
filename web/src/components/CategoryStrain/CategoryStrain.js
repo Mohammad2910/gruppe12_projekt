@@ -2,10 +2,10 @@ import React from "react";
 import {Link} from "react-router-dom";
 import './CategoryStrain.css';
 import {useParams} from "react-router";
-import {singleStrainStore} from "../../stores/SingleStrainStore";
+
 import CardCategory from "./CardCategory";
 import Box from "@mui/material/Box";
-import { observer } from "mobx-react-lite";
+
 
 const CategoryStrain = (props) => {
 
