@@ -8,6 +8,7 @@ import {Link} from "react-router-dom";
 import React from "react";
 
 const Distributor = () => {
+    // En kommentar til test af deploy speed
     return (
         <>
         <div className="distributors">
