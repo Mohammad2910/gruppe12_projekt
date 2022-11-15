@@ -52,10 +52,13 @@ export class MapContainer extends Component {
                         }
                     }
                 >
-                    <Marker
-                        onClick={this.onMarkerClick}
-                        name={'DTU Ballerup'}
-                    />
+                    {this.props.distributors.map((data) => {
+                        return <Marker
+                            onClick={this.onMarkerClick}
+                            name={'DTU Ballerup'}
+                            position={{lat: data.lat, lng: data.lng}}
+                        />
+                    })}
                     <InfoWindow
                         marker={this.state.activeMarker}
                         visible={this.state.showingInfoWindow}
