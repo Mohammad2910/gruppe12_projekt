@@ -54,10 +54,11 @@ export class MapContainer extends Component {
                 >
                     {this.props.distributors.map((data) => {
                         return <Marker
-                            onClick={this.onMarkerClick}
-                            name={'DTU Ballerup'}
-                            position={{lat: data.lat, lng: data.lng}}
-                        />
+                                onClick={this.onMarkerClick}
+                                name={data.title}
+                                position={{lat: data.lat, lng: data.lng}}
+                                description={"Tekst"}
+                            />
                     })}
                     <InfoWindow
                         marker={this.state.activeMarker}
@@ -65,6 +66,7 @@ export class MapContainer extends Component {
                         onClose={this.onClose}>
                         <div>
                             <h4>{this.state.selectedPlace.name}</h4>
+                            <p>{this.state.selectedPlace.description}</p>
                         </div>
                     </InfoWindow>
 
