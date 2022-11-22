@@ -2,18 +2,18 @@ import React from "react";
 import {Link} from "react-router-dom";
 import './CategoryStrain.css';
 import {useParams} from "react-router";
-import {singleStrainStore} from "../../stores/SingleStrainStore";
+
 import CardCategory from "./CardCategory";
 import Box from "@mui/material/Box";
-import { observer } from "mobx-react-lite";
 
-const CategoryStrain = observer(() => {
+
+const CategoryStrain = (props) => {
 
     const { id } = useParams();
 
     return(
         <div className="row">
-            {singleStrainStore.singleStrains.map((categoryStrain) =>  {
+            {props.strains.map((categoryStrain) =>  {
                 if(categoryStrain.type.id.toString() === id) {
                     return (
                     <div className="col-lg-4">
@@ -34,6 +34,6 @@ const CategoryStrain = observer(() => {
             } )}
         </div>
     )
-})
+}
 
 export default CategoryStrain
