@@ -8,13 +8,6 @@ const mapStyles = {
     position: 'relative'
 };
 
-// const LocationPin = ({ text }) => (
-//     <div className="pin">
-//         <Icon icon={locationIcon} className="pin-icon" />
-//         <p className="pin-text">{text}</p>
-//     </div>
-// )
-
 export class MapContainer extends Component {
     state = {
         showingInfoWindow: false,  // Hides or shows the InfoWindow
@@ -57,7 +50,7 @@ export class MapContainer extends Component {
                                 onClick={this.onMarkerClick}
                                 name={data.title}
                                 position={{lat: data.lat, lng: data.lng}}
-                                description={data.desc}
+                                description={data.description}
                             />
                     })}
                     <InfoWindow

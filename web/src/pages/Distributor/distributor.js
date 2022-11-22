@@ -3,8 +3,9 @@ import { distributorStore } from '../../stores/DistributorStore'
 import './style.css';
 import {Link} from "react-router-dom";
 import React from "react";
+import {observer} from "mobx-react-lite";
 
-const Distributor = () => {
+const Distributor = observer(() => {
     return (
         <>
         <div className="distributors">
@@ -25,6 +26,6 @@ const Distributor = () => {
         </div>
         </>
     )
-}
+})
 
 export default Distributor
