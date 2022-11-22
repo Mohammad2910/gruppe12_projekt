@@ -1,14 +1,11 @@
-import SideGrid from "../../components/SideGrid";
 import MapContainer from "../../components/map/map";
-
 import { distributorStore } from '../../stores/DistributorStore'
-
 import './style.css';
 import {Link} from "react-router-dom";
 import React from "react";
+import {observer} from "mobx-react-lite";
 
-const Distributor = () => {
-    // En kommentar til test af deploy speed
+const Distributor = observer(() => {
     return (
         <>
         <div className="distributors">
@@ -25,10 +22,10 @@ const Distributor = () => {
                     })}
                 </div>
             </div>
-                <MapContainer/>
+            <MapContainer distributors={distributorStore.distributors}/>
         </div>
         </>
     )
-}
+})
 
 export default Distributor

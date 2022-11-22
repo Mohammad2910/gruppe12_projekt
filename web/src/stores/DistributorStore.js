@@ -1,27 +1,18 @@
-import { makeObservable, observable } from "mobx"
+import {makeAutoObservable, runInAction} from "mobx"
 
 class DistributorStore {
-    distributors = [
-        {
-            title: 'Distributor1',
-        },
-        {
-            title: 'Distributor2',
-        },
-        {
-            title: 'Distributor3',
-        },
-        {
-            title: 'Distributor4',
-
-        }
-    ]
+    distributors = []
 
     constructor() {
-        makeObservable(this, {
-            distributors: observable,
-        })
+        makeAutoObservable(this,{},{autoBind:true})
+        this.fetchDistributors();
     }
+
+    fetchDistributors() {
+        fetch('https://grp12.servecounterstrike.com/api/distributors')
+            .then((response) => response.json())
+            .then((json) => runInAction(() => this.distributors = json))
+    };
 }
 
 export const distributorStore = new DistributorStore()

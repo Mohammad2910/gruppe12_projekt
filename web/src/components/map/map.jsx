@@ -8,13 +8,6 @@ const mapStyles = {
     position: 'relative'
 };
 
-// const LocationPin = ({ text }) => (
-//     <div className="pin">
-//         <Icon icon={locationIcon} className="pin-icon" />
-//         <p className="pin-text">{text}</p>
-//     </div>
-// )
-
 export class MapContainer extends Component {
     state = {
         showingInfoWindow: false,  // Hides or shows the InfoWindow
@@ -52,16 +45,21 @@ export class MapContainer extends Component {
                         }
                     }
                 >
-                    <Marker
-                        onClick={this.onMarkerClick}
-                        name={'DTU Ballerup'}
-                    />
+                    {this.props.distributors.map((data) => {
+                        return <Marker
+                                onClick={this.onMarkerClick}
+                                name={data.title}
+                                position={{lat: data.lat, lng: data.lng}}
+                                description={data.description}
+                            />
+                    })}
                     <InfoWindow
                         marker={this.state.activeMarker}
                         visible={this.state.showingInfoWindow}
                         onClose={this.onClose}>
                         <div>
                             <h4>{this.state.selectedPlace.name}</h4>
+                            <p>{this.state.selectedPlace.description}</p>
                         </div>
                     </InfoWindow>
 
