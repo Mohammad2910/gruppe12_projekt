@@ -57,7 +57,7 @@ export class MapContainer extends Component {
                                 onClick={this.onMarkerClick}
                                 name={data.title}
                                 position={{lat: data.lat, lng: data.lng}}
-                                description={"Tekst"}
+                                description={data.desc}
                             />
                     })}
                     <InfoWindow

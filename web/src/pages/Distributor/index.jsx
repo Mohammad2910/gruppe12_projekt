@@ -1,8 +1,5 @@
-import SideGrid from "../../components/SideGrid";
 import MapContainer from "../../components/map/map";
-
 import { distributorStore } from '../../stores/DistributorStore'
-
 import './style.css';
 import {Link} from "react-router-dom";
 import React from "react";
