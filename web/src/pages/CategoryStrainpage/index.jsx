@@ -10,7 +10,7 @@ const CategoryStrainpage = observer(() => {
         <>
             <div className="strains">
                 <SideGrid strains={strainStore.strains} categories={singleStrainStore.singleStrains}/>
-                <CategoryStrain/>
+                <CategoryStrain strains = {singleStrainStore.singleStrains}/>
             </div>
         </>
     )

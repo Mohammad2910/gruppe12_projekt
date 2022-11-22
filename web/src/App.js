@@ -35,6 +35,7 @@ const DefaultContainer = () => (
             <Navbar />
             <main>
                 <Routes>
+
                     <Route path="/home" element={<Frontpage/>}/>
                     <Route path="/strains" element={<Strainpage/>} />
                     <Route path="/distributor" element={<Distributor/>} />

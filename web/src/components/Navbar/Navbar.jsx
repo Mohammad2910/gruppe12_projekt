@@ -29,7 +29,7 @@ const Navbar = () => {
                                     <Link className="nav-link active" to='/distributor'>Distributor</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link active" to='/home'>Profile</Link>
+                                    <Link className="nav-link active" to='/profile'>Profile</Link>
                                 </li>
                             </ul>
                             <form className="d-flex ">
