@@ -19,7 +19,7 @@ const CategoryStrain = (props) => {
                     <div className="col-lg-4">
                         <Box sx={{p: 1}}>
 
-                            <Link to={`/strains/${categoryStrain.title}`}>
+                            <Link to={`/strains/${categoryStrain.id}`}>
                                 <CardCategory
                                         title={categoryStrain.title}
                                         src={categoryStrain.src}

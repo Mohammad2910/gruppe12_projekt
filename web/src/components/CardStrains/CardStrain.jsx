@@ -22,14 +22,14 @@ function CardStrain(props) {
                     <Typography gutterBottom variant="h5" component="div">
                         {props.strainTitle}
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">
+                    <div variant="body2" color="text.secondary">
                         <ul>
                             <li key={props.id}>{props.origin}</li>
                             <li key={props.id}>{props.description}</li>
                             <li key={props.id}>{props.ratio}</li>
                             <li key={props.id}>{props.effects}</li>
                         </ul>
-                    </Typography>
+                    </div>
                 </CardContent>
             </CardActionArea>
         </Card>
