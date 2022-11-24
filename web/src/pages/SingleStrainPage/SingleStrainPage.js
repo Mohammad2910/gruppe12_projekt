@@ -11,13 +11,15 @@ const SingleStrainPage = observer(() => {
     const { id } = useParams();
     const data = singleStrainStore.singleStrains.find(obj => obj.id.toString() === id)
 
-    return(
-        <>
-            <div className="strain">
-                <SingleStrain strain={data}/>
-            </div>
-        </>
-    )
+    if (data) {
+        return(
+            <>
+                <div className="strain">
+                    <SingleStrain strain={data}/>
+                </div>
+            </>
+        )
+    }
 })
 
 export default SingleStrainPage
