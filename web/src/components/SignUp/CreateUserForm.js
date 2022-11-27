@@ -20,8 +20,6 @@
  import { Link } from "react-router-dom";
  import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider/LocalizationProvider";
  
-
- 
  
  function CreateUserForm() {
      return(
@@ -65,6 +63,23 @@
         alert(`${firstName}, ${lastName}, ${eMail}, ${userName}, ${password} , ${gender} , ${date}`);
 
         //TODO: lav et js object som kan returneres til backend med de rette værdier
+
+        const User = {
+            FirstName : {firstName},
+            LastName  : {lastName},
+            EMail     : {eMail},
+            Gender    : {gender},
+            Birthday  : {date},
+            UsernName : {userName},
+            Password  : {password}
+         };
+
+        let response = postFormData(User);
+
+        //let jsonUser = JSON.stringify(User);
+        //TODO: hvis der er tid lav en modal
+        //alert(`${jsonUser}`);
+        
     
     }
 
@@ -176,6 +191,16 @@
          {props.title}
          </Typography>
      )
+ }
+
+ function postFormData(User) {
+    fetch('https://grp12.servecounterstrike.com/api/', {
+        method : 'post',
+        body   : JSON.stringify(User)
+    }).then(function(response) {
+        return response.json();
+    });
+    
  }
 
 
