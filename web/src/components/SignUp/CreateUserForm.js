@@ -63,7 +63,6 @@
                     
                     <FormControlLabel value="Female" control={<Radio />} label="Female" />
                     <FormControlLabel value="Male" control={<Radio />} label="Male" />
-                    <FormControlLabel value="Cisgender" control={<Radio />} label="Cisgender" />
                     <FormControlLabel value="Gender fluid" control={<Radio />} label="Gender fluid" />
                     <FormControlLabel value="Transgender" control={<Radio />} label="Transgender" />
                     <FormControlLabel value="Transgender man" control={<Radio />} label="Transgender man" />
