@@ -58,7 +58,7 @@ export class MapContainer extends Component {
                         visible={this.state.showingInfoWindow}
                         onClose={this.onClose}>
                         <div>
-                            <h4>{this.state.selectedPlace.name}</h4>
+                            <h5>{this.state.selectedPlace.name}</h5>
                             <p>{this.state.selectedPlace.description}</p>
                         </div>
                     </InfoWindow>
