@@ -4,6 +4,7 @@
  */
 
  import React from "react";
+ import { useState } from "react";
  import Box from "@mui/material/Box";
  import Grid from "@mui/material/Grid";
  import Radio from "@mui/material/Radio";
@@ -13,7 +14,11 @@
  import Typography from '@mui/material/Typography';
  import TextField from '@mui/material/TextField';
  import Button from "@mui/material/Button";
+ import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
+ import dayjs from 'dayjs';
+ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
  import { Link } from "react-router-dom";
+ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider/LocalizationProvider";
  
 
  
@@ -46,6 +51,7 @@
 
  
  const SignUpForm = () => {
+    const [date, setDate] =useState("");
      return(
          <div className="SignUp-form">
              
@@ -57,6 +63,11 @@
             </FormControl>
             <FormControl fullWidth sx={{ m: 2}}>
                 <InputField id="email-outlined" label="Email" variant="outlined" />
+            </FormControl>
+            <FormControl fullWidth sx={{ m: 2}}>
+                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                    <BirthDayField label="Birthday" inputFormat="MM/DD/YYYY" value={date} />
+                </LocalizationProvider>
             </FormControl>
             <FormControl fullWidth sx={{ m: 2}}>
                 <RadioGroup row name="radio-row-buttons">
@@ -125,6 +136,21 @@
             {props.buttonText}
         </Button>
     )
+ }
+
+
+ const BirthDayField = (props) => {
+
+    return(
+
+        <DesktopDatePicker
+        label = {props.label}
+        inputFormat = {props.inputFormat}
+        value = {props.value}
+        renderInput={(params) => <TextField{...params} required/>}
+        />
+    )
+   
  }
 
  
