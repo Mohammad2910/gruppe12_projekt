@@ -194,7 +194,7 @@
  }
 
  function postFormData(User) {
-    fetch('https://grp12.servecounterstrike.com/api/', {
+    fetch('https://grp12.servecounterstrike.com/api/user', {
         method : 'post',
         body   : JSON.stringify(User)
     }).then(function(response) {
