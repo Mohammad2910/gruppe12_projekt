@@ -17,20 +17,21 @@ const Frontpage = () => {
                     <div className="carousel-inner">
                         <div className="carousel-item active">
                             <img
-                                src="https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                src="https://static.israel21c.org/www/uploads/2022/03/david-gabric-unsplash-1520x855.jpg"
                                 className="d-block w-100" alt="..." height="100%"/>
                             <div className="carousel-caption">
-                                <h5 className="animate__slideInDown">Hello World</h5>
-                                <p className="d-none d-md-block animate__fadeInUp">Lorem ipsum dolor sit amet,
-                                    consectetur adipisicing
-                                    elit. Atque dolores officia quisquam repellat tempore, voluptate!</p>
+                                <h5 className="animate__slideInDown">Shaping a new tomorrow</h5>
+                                <p className="d-none d-md-block animate__fadeInUp">GreenHelp believes in a brighter
+                                    tomorrow providing new business possibilities and specialized medicaments for a
+                                    variety of illnesses</p>
                                 <button className="btn btn-primary mt-3 text-uppercase">Learn More</button>
+
                             </div>
                         </div>
                         <div className="carousel-item">
                             <img
-                                src="https://images.pexels.com/photos/313782/pexels-photo-313782.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                                className="d-block w-100" alt="..." height="100%"/>
+                                src="https://www.gannett-cdn.com/presto/2019/04/17/PPHX/177b118b-1725-4bcb-b913-f766f11067b8-Amado-MGT-4-16-19-B.jpg?crop=2463,1386,x0,y0&width=1500"
+                                className="d-block w-100" alt="..."/>
                             <div className="carousel-caption">
                                 <h5 className="animate__fadeInDown">Lorem ipsum.</h5>
                                 <p className="d-none d-md-block animate__fadeInUp">Lorem ipsum dolor sit amet,
@@ -41,7 +42,7 @@ const Frontpage = () => {
                         </div>
                         <div className="carousel-item">
                             <img
-                                src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                src="https://assets.technologynetworks.com/production/dynamic/images/content/329210/exploring-the-medicinal-benefits-of-cannabis-within-uk-pharmaceuticals-329210-960x540.webp?cb=10532804"
                                 className="d-block w-100" alt="..." height="100%"/>
                             <div className="carousel-caption">
                                 <h5 className="animate__fadeInDown">Lorem ipsum dolor.</h5>
@@ -70,13 +71,13 @@ const Frontpage = () => {
                             <div className="col-lg-4 col-md-12 col-12">
                                 <div className="about-img">
                                     <img
-                                        src="https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                        src="https://img.freepik.com/free-photo/elderly-female-smiling-with-young-female-doctor-visiting-senior-patient-woman-hospital-ward_1150-21714.jpg?w=1380&t=st=1669584732~exp=1669585332~hmac=2566cbc0c318bf4a0e120f224b6ba52db8df34bea4a6a7dacf8c31d5ea2d7f69"
                                         alt="" className="img-fluid"/>
                                 </div>
                             </div>
                             <div className="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
                                 <div className="about-text">
-                                    <h2>We Provide Best Quality <br/>Software Systems Ever</h2>
+                                    <h2>We Provide Best Quality <br/>Weed Ever</h2>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi
                                         architecto asperiores assumenda beatae deserunt dicta ea eum explicabo harum
                                         illum in incidunt laudantium minima molestiae molestias nisi officia placeat
@@ -109,7 +110,7 @@ const Frontpage = () => {
                             <div className="card text-center pb-2">
                                 <div className="card-body">
                                     <img
-                                        src="https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                        src="https://media-exp1.licdn.com/dms/image/D4E03AQG00iU_iPyHmg/profile-displayphoto-shrink_800_800/0/1669586418046?e=1675296000&v=beta&t=i9RQIQPlQkJvLRpN9gxuwswRwS9wCQy-dVg8qm695Yo"
                                         alt="" height="200" width="200" className="rounded-circle"/>
                                     <h3 className="card-title mt-2">
                                         David Mikkelsen
@@ -124,7 +125,7 @@ const Frontpage = () => {
                             <div className="card text-center pb-2">
                                 <div className="card-body">
                                     <img
-                                        src="https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                        src="https://media-exp1.licdn.com/dms/image/C4E03AQFwnJrroKkavg/profile-displayphoto-shrink_800_800/0/1638973555826?e=1675296000&v=beta&t=8WIBTb_wuAfbQlruddp3FAaLUpCSQeLRWjtEYbCBCB8"
                                         alt="" height="200" width="200" className="rounded-circle"/>
                                     <h3 className="card-title mt-2">
                                         Anthony Haidari
@@ -139,10 +140,10 @@ const Frontpage = () => {
                             <div className="card text-center pb-2">
                                 <div className="card-body">
                                     <img
-                                        src="https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                        src="https://media-exp1.licdn.com/dms/image/C4D03AQH0-9M9uBtiEQ/profile-displayphoto-shrink_800_800/0/1664274348369?e=1675296000&v=beta&t=uHcr0Yxd0IRQJR-rEm7CEBP7hFWLGKGRnvtX8ZJTyG0"
                                         alt="" height="200" width="200" className="rounded-circle"/>
                                     <h3 className="card-title mt-2">
-                                        Johan
+                                        Johan Kryger
                                     </h3>
                                     <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                         Aspernatur beatae distinctio optio similique temporibus ullam voluptates. Culpa
@@ -158,10 +159,10 @@ const Frontpage = () => {
                             <div className="card text-center pb-2">
                                 <div className="card-body">
                                     <img
-                                        src="https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                        src="https://media-exp1.licdn.com/dms/image/C4E03AQGhQEVtnya4ow/profile-displayphoto-shrink_800_800/0/1634983808829?e=1675296000&v=beta&t=NurLdXi6L_FuuyswMUJAeVc9VrAGjLmMHAxWNVBkCGQ"
                                         alt="" height="200" width="200" className="rounded-circle"/>
                                     <h3 className="card-title mt-2">
-                                        Andreas
+                                        Andreas Petersen
                                     </h3>
                                     <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                         Aspernatur beatae distinctio optio similique temporibus ullam voluptates. Culpa
@@ -173,10 +174,10 @@ const Frontpage = () => {
                             <div className="card text-center pb-2">
                                 <div className="card-body">
                                     <img
-                                        src="https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                        src="https://media-exp1.licdn.com/dms/image/D4E03AQHOiYGTWHvD8g/profile-displayphoto-shrink_800_800/0/1664473758323?e=1675296000&v=beta&t=XSKA3JF7EPcGqZ8lzelpJcRGuhrpMUECQEb8ON2w0xo"
                                         alt="" height="200" width="200" className="rounded-circle"/>
                                     <h3 className="card-title mt-2">
-                                        Mohammad N
+                                        Mohammad Uddin
                                     </h3>
                                     <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                         Aspernatur beatae distinctio optio similique temporibus ullam voluptates. Culpa
@@ -188,7 +189,7 @@ const Frontpage = () => {
                             <div className="card text-center pb-2">
                                 <div className="card-body">
                                     <img
-                                        src="https://images.pexels.com/photos/1704488/pexels-photo-1704488.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                        src="https://media-exp1.licdn.com/dms/image/C4E03AQGwWTqwzwEs6g/profile-displayphoto-shrink_800_800/0/1599206462030?e=1675296000&v=beta&t=4vBceWl9luF8rWtZp91KVgP6SYWWKTSJNLdQu8nto7o"
                                         alt="" height="200" width="200" className="rounded-circle"/>
                                     <h3 className="card-title mt-2">
                                         Christian Budtz
