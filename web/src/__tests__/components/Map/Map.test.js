@@ -1,6 +1,6 @@
 import React from "react";
 import '@testing-library/jest-dom'
-import {MapContainer} from "../../../components/map/map";
+import {MapContainer} from "../../../components/Map/map";
 import {render, queryByAttribute} from "@testing-library/react";
 
 test('Test to see if map exists',() => {
