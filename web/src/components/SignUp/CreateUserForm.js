@@ -19,6 +19,7 @@
  import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
  import { Link } from "react-router-dom";
  import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider/LocalizationProvider";
+
  
  
  function CreateUserForm() {
@@ -50,7 +51,7 @@
  
  const SignUpForm = () => {
     //TODO: det virker men den tager ikke tiden fra når submit blev trykket på, men når siden bliver rendered
-    const [date, setDate] = useState(dayjs(new Date().toString()));
+    const [birthday, setDate] = useState(dayjs(new Date().toString()));
     const [firstName, setFirstname] = useState("");
     const [lastName, setLastname] = useState("");
     const [eMail, setEmail] = useState("");
@@ -58,27 +59,27 @@
     const [userName, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
+
     const submit = (e) => {
         e.preventDefault();
-        alert(`${firstName}, ${lastName}, ${eMail}, ${userName}, ${password} , ${gender} , ${date}`);
 
         //TODO: lav et js object som kan returneres til backend med de rette værdier
 
+    
         const User = {
-            FirstName : {firstName},
-            LastName  : {lastName},
-            EMail     : {eMail},
-            Gender    : {gender},
-            Birthday  : {date},
-            UsernName : {userName},
-            Password  : {password}
+            firstName,
+            lastName,
+            eMail,
+            gender,
+            birthday,
+            userName,
+            password
          };
 
+        //TODO salt og hash password før det sendes til backend
         let response = postFormData(User);
-
-        //let jsonUser = JSON.stringify(User);
-        //TODO: hvis der er tid lav en modal
-        //alert(`${jsonUser}`);
+        alert(`${response}`);
+        
         
     
     }
@@ -123,7 +124,7 @@
                     <DesktopDatePicker
                         label="Birthday" 
                         inputFormat="MM/DD/YYYY" 
-                        value={date}
+                        value={birthday}
                         renderInput={(params) => <TextField{...params} required/>}
                         onChange={handleChangeDate}
                     />
@@ -169,9 +170,9 @@
                     variant="contained" 
                     buttonText="Submit" 
                     size="large"
-                    onClick={submit}
+                     onClick={submit}
                 >
-                Submit
+                    Submit
                 </Button>
             </FormControl>
             <FormControl sx={{ m: 1, width: '20ch' }}>
@@ -191,12 +192,13 @@
          {props.title}
          </Typography>
      )
- }
-
+}
+ 
  function postFormData(User) {
-    fetch('https://grp12.servecounterstrike.com/api/user', {
+    fetch('http://localhost:8080/api/user', {
         method : 'post',
-        body   : JSON.stringify(User)
+        body: JSON.stringify(User),
+        headers: {"Content-Type" : "application/json"}
     }).then(function(response) {
         return response.json();
     });
