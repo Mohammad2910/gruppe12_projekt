@@ -51,26 +51,71 @@
 
  
  const SignUpForm = () => {
-    const [date, setDate] =useState("");
+    //TODO: det virker men den tager ikke tiden fra når submit blev trykket på, men når siden bliver rendered
+    const [date, setDate] = useState(dayjs(new Date().toString()));
+    const [firstName, setFirstname] = useState("");
+    const [lastName, setLastname] = useState("");
+    const [eMail, setEmail] = useState("");
+    const [gender, setGender] = useState("");
+    const [userName, setUsername] = useState("");
+    const [password, setPassword] = useState("");
+
+    const submit = (e) => {
+        e.preventDefault();
+        alert(`${firstName}, ${lastName}, ${eMail}, ${userName}, ${password} , ${gender} , ${date}`);
+
+        //TODO: lav et js object som kan returneres til backend med de rette værdier
+    
+    }
+
+    const handleChangeDate = (newValue) => {
+        setDate(newValue);
+    }
+    
+
      return(
          <div className="SignUp-form">
              
             <FormControl sx={{ m: 2, width: '20ch' }}> 
-                <InputField id="firstName-outlined" label="First Name" variant="outlined" />
+                <TextField 
+                    id="firstName-outlined" 
+                    label="First Name" 
+                    variant="outlined" 
+                    value={firstName}
+                    onChange={(event) => setFirstname(event.target.value)} 
+                />
             </FormControl>
             <FormControl sx={{ m: 2, width: '20ch' }}>
-                <InputField id="lastName-outlined" label="Last Name" variant="outlined" />
+                <TextField 
+                    id="lastName-outlined"
+                    label="Last Name" 
+                    variant="outlined" 
+                    value={lastName}
+                    onChange={(event) => setLastname(event.target.value)}  
+                />
             </FormControl>
             <FormControl fullWidth sx={{ m: 2}}>
-                <InputField id="email-outlined" label="Email" variant="outlined" />
+                <TextField 
+                    id="email-outlined" 
+                    label="Email" 
+                    variant="outlined" 
+                    value={eMail}
+                    onChange={(event) => setEmail(event.target.value)}  
+                />
             </FormControl>
             <FormControl fullWidth sx={{ m: 2}}>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
-                    <BirthDayField label="Birthday" inputFormat="MM/DD/YYYY" value={date} />
+                    <DesktopDatePicker
+                        label="Birthday" 
+                        inputFormat="MM/DD/YYYY" 
+                        value={date}
+                        renderInput={(params) => <TextField{...params} required/>}
+                        onChange={handleChangeDate}
+                    />
                 </LocalizationProvider>
             </FormControl>
             <FormControl fullWidth sx={{ m: 2}}>
-                <RadioGroup row name="radio-row-buttons">
+                <RadioGroup row name="radio-row-buttons" onChange={(event) => setGender(event.target.value)} >
                     
                     <FormControlLabel value="Female" control={<Radio />} label="Female" />
                     <FormControlLabel value="Male" control={<Radio />} label="Male" />
@@ -86,13 +131,33 @@
                 </RadioGroup>
             </FormControl>
             <FormControl sx={{ m: 2, width: '20ch' }}>
-                <InputField id="Username-outlined" label="User Name" variant="outlined" />
+                <TextField 
+                    id="Username-outlined" 
+                    label="User Name" 
+                    variant="outlined" 
+                    value={userName}
+                    onChange={(event) => setUsername(event.target.value)}  
+                />
             </FormControl>
             <FormControl sx={{ m: 2, width: '20ch' }}>
-                <InputField id="password-outlined" label="Password" type="password" />
+                <TextField 
+                    id="password-outlined" 
+                    label="Password" 
+                    type="password" 
+                    value={password}
+                    onChange={(event) => setPassword(event.target.value)} 
+                />
             </FormControl>
             <FormControl sx={{ m: 4, width: '20ch' }}>
-                <SubmitButton color="success" variant="contained" buttonText="Submit" size="large"/>
+                <Button 
+                    color="success" 
+                    variant="contained" 
+                    buttonText="Submit" 
+                    size="large"
+                    onClick={submit}
+                >
+                Submit
+                </Button>
             </FormControl>
             <FormControl sx={{ m: 1, width: '20ch' }}>
                 <Link to='/home'>Back to home</Link>
@@ -104,19 +169,6 @@
  }
  
  
- const InputField = (props) => {
-     return(
-         <TextField
-            id = {props.id}
-            label = {props.label}
-            variant = {props.variant}
-            helperText = {props.helperText}
-            type = {props.type}
-         />
-     );
- }
-
- 
  
  const FormTitle = (props) => {
      return(
@@ -126,32 +178,7 @@
      )
  }
 
- const SubmitButton = (props) => {
-    return(
-        <Button
-            color = {props.color}
-            variant = {props.variant}
-            size = {props.size}
-        >
-            {props.buttonText}
-        </Button>
-    )
- }
 
-
- const BirthDayField = (props) => {
-
-    return(
-
-        <DesktopDatePicker
-        label = {props.label}
-        inputFormat = {props.inputFormat}
-        value = {props.value}
-        renderInput={(params) => <TextField{...params} required/>}
-        />
-    )
-   
- }
 
  
  export default CreateUserForm;
