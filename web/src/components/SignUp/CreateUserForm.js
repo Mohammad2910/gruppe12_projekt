@@ -29,7 +29,7 @@
               >
                  <Box
                      width={500} 
-                     height={600}
+                     height={800}
                      marginTop={10}
                      bgcolor="#f2f2f2"
                      alignItems="center"
@@ -49,10 +49,10 @@
      return(
          <div className="SignUp-form">
              
-            <FormControl sx={{ m: 2, width: '25ch' }}> 
+            <FormControl sx={{ m: 2, width: '20ch' }}> 
                 <InputField id="firstName-outlined" label="First Name" variant="outlined" />
             </FormControl>
-            <FormControl sx={{ m: 2, width: '25ch' }}>
+            <FormControl sx={{ m: 2, width: '20ch' }}>
                 <InputField id="lastName-outlined" label="Last Name" variant="outlined" />
             </FormControl>
             <FormControl fullWidth sx={{ m: 2}}>
@@ -75,16 +75,16 @@
 
                 </RadioGroup>
             </FormControl>
-            <FormControl sx={{ m: 2, width: '25ch' }}>
+            <FormControl sx={{ m: 2, width: '20ch' }}>
                 <InputField id="Username-outlined" label="User Name" variant="outlined" />
             </FormControl>
-            <FormControl sx={{ m: 2, width: '25ch' }}>
+            <FormControl sx={{ m: 2, width: '20ch' }}>
                 <InputField id="password-outlined" label="Password" type="password" />
             </FormControl>
-            <FormControl sx={{ m: 4, width: '25ch' }}>
+            <FormControl sx={{ m: 4, width: '20ch' }}>
                 <SubmitButton color="success" variant="contained" buttonText="Submit" size="large"/>
             </FormControl>
-            <FormControl sx={{ m: 4, width: '25ch' }}>
+            <FormControl sx={{ m: 1, width: '20ch' }}>
                 <Link to='/home'>Back to home</Link>
             </FormControl>
 
