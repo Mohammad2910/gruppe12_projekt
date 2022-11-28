@@ -21,8 +21,12 @@
  import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider/LocalizationProvider";
 
  
- 
- function CreateUserForm() {
+ /**
+  * Function which defines the  SignUpForm component, its position in the window and its
+  * surrounding box 
+  * @returns The SignUpForm component
+  */
+ function SignUpForm() {
      return(
          <div className="createuser-form">
              <Grid 
@@ -41,17 +45,20 @@
                      sx={{boxShadow: 5, p :5}}
                  > 
                      <FormTitle title="Sign Up" />
-                     <SignUpForm />
+                     <Form />
                  </Box>
              </Grid>
          </div>
      )
  }
 
- 
- const SignUpForm = () => {
+ /**
+  * defines the fields in the form, associated states, buttons and event handlers. 
+  * @returns all the components of the form
+  */
+ const Form = () => {
     //TODO: det virker men den tager ikke tiden fra når submit blev trykket på, men når siden bliver rendered
-    const [birthday, setDate] = useState(dayjs(new Date().toString()));
+    const [birthday, setBirthday] = useState(dayjs(new Date().toString()));
     const [firstName, setFirstname] = useState("");
     const [lastName, setLastname] = useState("");
     const [eMail, setEmail] = useState("");
@@ -62,9 +69,6 @@
 
     const submit = (e) => {
         e.preventDefault();
-
-        //TODO: lav et js object som kan returneres til backend med de rette værdier
-
     
         const User = {
             firstName,
@@ -80,12 +84,10 @@
         let response = postFormData(User);
         alert(`${response}`);
         
-        
-    
     }
 
-    const handleChangeDate = (newValue) => {
-        setDate(newValue);
+    const handleChangeBirthday = (newValue) => {
+        setBirthday(newValue);
     }
     
 
@@ -126,7 +128,7 @@
                         inputFormat="MM/DD/YYYY" 
                         value={birthday}
                         renderInput={(params) => <TextField{...params} required/>}
-                        onChange={handleChangeDate}
+                        onChange={handleChangeBirthday}
                     />
                 </LocalizationProvider>
             </FormControl>
@@ -179,13 +181,16 @@
                 <Link to='/home'>Back to home</Link>
             </FormControl>
 
-
          </div>
      );
  }
  
  
- 
+ /**
+  * Renders a Title on the basis of a given title property
+  * @param {*} props - title to display
+  * @returns   A title in h1 format
+  */
  const FormTitle = (props) => {
      return(
          <Typography component="h1" variant="h5" sx={{ m: 1 }}>
@@ -194,6 +199,10 @@
      )
 }
  
+/**
+ * Function for posting user data to the backend 
+ * @param {*} User object populated with user data from the sign-up form
+ */
  function postFormData(User) {
     fetch('http://localhost:8080/api/user', {
         method : 'post',
@@ -205,7 +214,5 @@
     
  }
 
-
-
  
- export default CreateUserForm;
+ export default SignUpForm;
