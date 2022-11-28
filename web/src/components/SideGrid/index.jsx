@@ -20,7 +20,7 @@ const SideGrid = (props) => {
                                     if (categoryStrain.type.id === data.id) {
                                         return (
                                             <Link underline='hover' to={`/strains/${categoryStrain.id}`}>
-                                                <li>{categoryStrain.title}</li>
+                                                <li key={categoryStrain.id}>{categoryStrain.title}</li>
                                             </Link>
                                         )
                                     }
