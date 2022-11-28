@@ -3,6 +3,10 @@
     height: 150vh;
 }
 
+body {
+    background: #f1fbff;
+}
+
 .carousel-caption {
     bottom: 200px;
     z-index: 2;
@@ -12,6 +16,7 @@
     font-size: 45px;
     text-transform: uppercase;
     letter-spacing: 2px;
+    margin-top: 25px;
 }
 
 .carousel-caption p {
@@ -34,7 +39,7 @@
 
 }
 
-.carousel-inner:before {
+.carousel-inner::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -45,21 +50,24 @@
     z-index: 1;
 }
 
+
 @media screen and (min-width: 768px) and (max-width: 991px) {
     .carousel-caption {
-        bottom: 370px;
-
+        bottom: 350px;
     }
 
     .carousel-caption p {
         width: 100%;
     }
-
 }
 
 @media only screen and (max-width: 767px) {
     .carousel-caption {
         bottom: 125px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 17px;
     }
 
     .carousel-caption a {
@@ -72,5 +80,7 @@
         font-size: 12px;
     }
 
-
+    .team .card {
+        box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
+    }
 }

@@ -90,7 +90,8 @@ const Frontpage = () => {
                 </section>
 
 
-                <section className="services section-padding">
+
+                <section id="team" className="services section-padding">
                     <div className="container mt-5">
                         <div className="row">
                             <div className="col-md-12">
@@ -100,17 +101,13 @@ const Frontpage = () => {
                             </div>
                         </div>
                     </div>
-                </section>
-
-
-                <div className="container mb-3">
                     <div className="row">
                         <div className="col-12 col-md-12 col-lg-4">
-                            <div className="card text-center pb-2">
+                            <div className="card text-center bg-white pb-2">
                                 <div className="card-body">
                                     <img
                                         src="https://media-exp1.licdn.com/dms/image/D4E03AQG00iU_iPyHmg/profile-displayphoto-shrink_800_800/0/1669586418046?e=1675296000&v=beta&t=i9RQIQPlQkJvLRpN9gxuwswRwS9wCQy-dVg8qm695Yo"
-                                        alt="" height="200" width="200" className="rounded-circle"/>
+                                        alt="" height="200" width="200" className="img-fluid rounded-circle"/>
                                     <h3 className="card-title mt-2">
                                         David Mikkelsen
                                     </h3>
@@ -125,7 +122,7 @@ const Frontpage = () => {
                                 <div className="card-body">
                                     <img
                                         src="https://media-exp1.licdn.com/dms/image/C4E03AQFwnJrroKkavg/profile-displayphoto-shrink_800_800/0/1638973555826?e=1675296000&v=beta&t=8WIBTb_wuAfbQlruddp3FAaLUpCSQeLRWjtEYbCBCB8"
-                                        alt="" height="200" width="200" className="rounded-circle"/>
+                                        alt="" height="200" width="200" className="img-fluid rounded-circle"/>
                                     <h3 className="card-title mt-2">
                                         Anthony Haidari
                                     </h3>
@@ -140,7 +137,7 @@ const Frontpage = () => {
                                 <div className="card-body">
                                     <img
                                         src="https://media-exp1.licdn.com/dms/image/C4D03AQH0-9M9uBtiEQ/profile-displayphoto-shrink_800_800/0/1664274348369?e=1675296000&v=beta&t=uHcr0Yxd0IRQJR-rEm7CEBP7hFWLGKGRnvtX8ZJTyG0"
-                                        alt="" height="200" width="200" className="rounded-circle"/>
+                                        alt="" height="200" width="200" className="img-fluid rounded-circle"/>
                                     <h3 className="card-title mt-2">
                                         Johan Kryger
                                     </h3>
@@ -151,20 +148,20 @@ const Frontpage = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="container mb-3">
-                    <div className="row">
+
+                    <div className="row mt-3">
                         <div className="col-12 col-md-12 col-lg-4">
                             <div className="card text-center pb-2">
                                 <div className="card-body">
                                     <img
                                         src="https://media-exp1.licdn.com/dms/image/C4E03AQGhQEVtnya4ow/profile-displayphoto-shrink_800_800/0/1634983808829?e=1675296000&v=beta&t=NurLdXi6L_FuuyswMUJAeVc9VrAGjLmMHAxWNVBkCGQ"
-                                        alt="" height="200" width="200" className="rounded-circle"/>
+                                        alt="" height="200" width="200" className="img-fluid rounded-circle"/>
                                     <h3 className="card-title mt-2">
                                         Andreas Petersen
                                     </h3>
                                     <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Aspernatur beatae distinctio optio similique temporibus ullam voluptates. Culpa
+                                        Aspernatur beatae distinctio optio similique temporibus ullam voluptates.
+                                        Culpa
                                         dolore nobis quis!</p>
                                 </div>
                             </div>
@@ -174,9 +171,60 @@ const Frontpage = () => {
                                 <div className="card-body">
                                     <img
                                         src="https://media-exp1.licdn.com/dms/image/D4E03AQHOiYGTWHvD8g/profile-displayphoto-shrink_800_800/0/1664473758323?e=1675296000&v=beta&t=XSKA3JF7EPcGqZ8lzelpJcRGuhrpMUECQEb8ON2w0xo"
-                                        alt="" height="200" width="200" className="rounded-circle"/>
+                                        alt="" height="200" width="200" className="img-fluid rounded-circle"/>
                                     <h3 className="card-title mt-2">
                                         Mohammad Uddin
+                                    </h3>
+                                    <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Aspernatur beatae distinctio optio similique temporibus ullam voluptates.
+                                        Culpa
+                                        dolore nobis quis!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                {/* <div className="container mb-3">
+                    <div className="row">
+                        <div className="col-12 col-md-12 col-lg-4">
+                            <div className="card text-center bg-white pb-2">
+                                <div className="card-body">
+                                    <img
+                                        src="https://media-exp1.licdn.com/dms/image/D4E03AQG00iU_iPyHmg/profile-displayphoto-shrink_800_800/0/1669586418046?e=1675296000&v=beta&t=i9RQIQPlQkJvLRpN9gxuwswRwS9wCQy-dVg8qm695Yo"
+                                        alt="" height="200" width="200" className="img-fluid rounded-circle"/>
+                                    <h3 className="card-title mt-2">
+                                        David Mikkelsen
+                                    </h3>
+                                    <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Aspernatur beatae distinctio optio similique temporibus ullam voluptates. Culpa
+                                        dolore nobis quis!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-12 col-md-12 col-lg-4">
+                            <div className="card text-center pb-2">
+                                <div className="card-body">
+                                    <img
+                                        src="https://media-exp1.licdn.com/dms/image/C4E03AQFwnJrroKkavg/profile-displayphoto-shrink_800_800/0/1638973555826?e=1675296000&v=beta&t=8WIBTb_wuAfbQlruddp3FAaLUpCSQeLRWjtEYbCBCB8"
+                                        alt="" height="200" width="200" className="img-fluid rounded-circle"/>
+                                    <h3 className="card-title mt-2">
+                                        Anthony Haidari
+                                    </h3>
+                                    <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                        Aspernatur beatae distinctio optio similique temporibus ullam voluptates. Culpa
+                                        dolore nobis quis!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-12 col-md-12 col-lg-4">
+                            <div className="card text-center pb-2">
+                                <div className="card-body">
+                                    <img
+                                        src="https://media-exp1.licdn.com/dms/image/C4D03AQH0-9M9uBtiEQ/profile-displayphoto-shrink_800_800/0/1664274348369?e=1675296000&v=beta&t=uHcr0Yxd0IRQJR-rEm7CEBP7hFWLGKGRnvtX8ZJTyG0"
+                                        alt="" height="200" width="200" className="img-fluid rounded-circle"/>
+                                    <h3 className="card-title mt-2">
+                                        Johan Kryger
                                     </h3>
                                     <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                         Aspernatur beatae distinctio optio similique temporibus ullam voluptates. Culpa
@@ -185,7 +233,7 @@ const Frontpage = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>*/}
             </div>
         </>
     )
