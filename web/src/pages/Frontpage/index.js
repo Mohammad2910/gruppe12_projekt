@@ -1,7 +1,7 @@
 import './style.css';
 
-const Frontpage = () => {
 
+const Frontpage = () => {
     return (
         <>
             <div>
@@ -24,8 +24,8 @@ const Frontpage = () => {
                                 <p className="d-none d-md-block animate__fadeInUp">GreenHelp believes in a brighter
                                     tomorrow providing new business possibilities and specialized medicaments for a
                                     variety of illnesses</p>
-                                <button className="btn btn-primary mt-3 text-uppercase">Learn More</button>
-
+                                <a className="btn btn-primary mt-3 text-uppercase" type="button" href="/strains">Learn
+                                    More</a>
                             </div>
                         </div>
                         <div className="carousel-item">
@@ -185,27 +185,10 @@ const Frontpage = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-12 col-md-12 col-lg-4">
-                            <div className="card text-center pb-2">
-                                <div className="card-body">
-                                    <img
-                                        src="https://media-exp1.licdn.com/dms/image/C4E03AQGwWTqwzwEs6g/profile-displayphoto-shrink_800_800/0/1599206462030?e=1675296000&v=beta&t=4vBceWl9luF8rWtZp91KVgP6SYWWKTSJNLdQu8nto7o"
-                                        alt="" height="200" width="200" className="rounded-circle"/>
-                                    <h3 className="card-title mt-2">
-                                        Christian Budtz
-                                    </h3>
-                                    <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Aspernatur beatae distinctio optio similique temporibus ullam voluptates. Culpa
-                                        dolore nobis quis!</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </>
-
     )
 }
-
 export default Frontpage
