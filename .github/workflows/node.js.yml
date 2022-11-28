@@ -23,6 +23,6 @@ jobs:
       - name: Image prune
         run: sudo docker image prune -f
       - name: docker build
-        run: sudo docker-compose build front
+        run: sudo docker-compose build frontend
       - name: docker-compose up
-        run: sudo docker-compose up -d front
+        run: sudo docker-compose up -d frontend
