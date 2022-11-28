@@ -57,8 +57,8 @@
   * @returns all the components of the form
   */
  const Form = () => {
-    //TODO: det virker men den tager ikke tiden fra når submit blev trykket på, men når siden bliver rendered
-    const [birthday, setBirthday] = useState(dayjs(new Date().toString()));
+    
+    const [birthday, setBirthday] = useState(dayjs());
     const [firstName, setFirstname] = useState("");
     const [lastName, setLastname] = useState("");
     const [eMail, setEmail] = useState("");
@@ -83,6 +83,8 @@
         //TODO salt og hash password før det sendes til backend
         let response = postFormData(User);
         alert(`${response}`);
+
+        
         
     }
 
@@ -170,7 +172,6 @@
                 <Button 
                     color="success" 
                     variant="contained" 
-                    buttonText="Submit" 
                     size="large"
                      onClick={submit}
                 >
