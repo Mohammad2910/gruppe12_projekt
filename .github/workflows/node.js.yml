@@ -22,7 +22,7 @@ jobs:
           #cache-dependency-path: web/package-lock.json
       - name: Image prune
         run: sudo docker image prune -f
-      #- name: docker build
-      #  run: sudo docker-compose build frontend_greenHelp
+      - name: docker build
+        run: sudo docker-compose build frontend_greenHelp
       #- name: docker-compose up
       #  run: sudo docker-compose up -d frontend_greenHelp
