@@ -33,11 +33,10 @@ const Frontpage = () => {
                                 src="https://www.gannett-cdn.com/presto/2019/04/17/PPHX/177b118b-1725-4bcb-b913-f766f11067b8-Amado-MGT-4-16-19-B.jpg?crop=2463,1386,x0,y0&width=1500"
                                 className="d-block w-100" alt="..."/>
                             <div className="carousel-caption">
-                                <h5 className="animate__fadeInDown">Lorem ipsum.</h5>
-                                <p className="d-none d-md-block animate__fadeInUp">Lorem ipsum dolor sit amet,
-                                    consectetur adipisicing elit. Debitis laudantium, minima nihil quam sunt
-                                    voluptates!</p>
-                                <button className="btn btn-primary mt-3 text-uppercase">Learn More</button>
+                                <h5 className="animate__fadeInDown">Buy Local From Danish distributors</h5>
+                                <p className="d-none d-md-block animate__fadeInUp">Find Goverment approved distributors
+                                    based in and around Copenhagen</p>
+                                <a className="btn btn-primary mt-3 text-uppercase" href="/distributor">Learn More</a>
                             </div>
                         </div>
                         <div className="carousel-item">
@@ -45,11 +44,11 @@ const Frontpage = () => {
                                 src="https://assets.technologynetworks.com/production/dynamic/images/content/329210/exploring-the-medicinal-benefits-of-cannabis-within-uk-pharmaceuticals-329210-960x540.webp?cb=10532804"
                                 className="d-block w-100" alt="..." height="100%"/>
                             <div className="carousel-caption">
-                                <h5 className="animate__fadeInDown">Lorem ipsum dolor.</h5>
-                                <p className="d-none d-md-block animate__fadeInUp">Lorem ipsum dolor sit amet,
-                                    consectetur adipisicing elit. Architecto cupiditate eos
-                                    obcaecati ratione similique voluptatem.</p>
-                                <button className="btn btn-primary mt-3 text-uppercase">Learn More</button>
+                                <h5 className="animate__fadeInDown">Award-winning strains grown by Cannabis experts</h5>
+                                <p className="d-none d-md-block animate__fadeInUp">Our partners provide potent, organic
+                                    strains approved by Danish authorities. All strains have been perfected by years of
+                                    research conducted by experts from across the pharmaceutical industry</p>
+                                <a className="btn btn-primary mt-3 text-uppercase" href="/strains">Learn More</a>
                             </div>
                         </div>
                     </div>
