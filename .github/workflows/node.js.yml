@@ -20,5 +20,9 @@ jobs:
          # node-version: ${{ matrix.node-version }}
           #cache: 'npm'
           #cache-dependency-path: web/package-lock.json
-      - name: run a line
-        run: echo Hello World
+      - name: Image prune
+        run: sudo docker image prune -f
+      - name: docker build
+        run: sudo docker-compose build frontend
+      - name: docker-compose up
+        run: sudo docker-compose up -d frontend
