@@ -82,7 +82,7 @@
 
         //TODO salt og hash password før det sendes til backend
         let response = postFormData(User);
-        alert(`${response}`);
+        //alert(`${response}`);
 
         
         
@@ -204,9 +204,10 @@
  * Function for posting user data to the backend 
  * @param {*} User object populated with user data from the sign-up form
  */
- function postFormData(User) {
-    fetch('http://localhost:8080/api/user', {
-        method : 'post',
+function postFormData(User) {
+    console.log(User, JSON.stringify(User));
+    fetch('http://localhost:8080/api/users', {
+        method : 'POST',
         body: JSON.stringify(User),
         headers: {"Content-Type" : "application/json"}
     }).then(function(response) {
