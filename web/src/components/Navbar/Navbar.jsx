@@ -32,11 +32,6 @@ const Navbar = () => {
                                 <Link className="nav-link active" to='/profile'>Profile</Link>
                             </li>
                         </ul>
-                        <form className="d-flex ">
-                            <input className="form-control me-md-2" type="search" placeholder="Search"
-                                   aria-label="Search"/>
-                            <button className="fa fa-search btn btn-link me-2 text-decoration-none"/>
-                        </form>
                         <div className="d-flex nav-item">
                             <Link to='/'>
                                 <button type="button" className="btn btn-link px-3 me-2 text-decoration-none">
