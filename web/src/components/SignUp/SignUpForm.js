@@ -59,11 +59,11 @@
  const Form = () => {
     
     const [birthday, setBirthday] = useState(dayjs());
-    const [firstName, setFirstname] = useState("");
-    const [lastName, setLastname] = useState("");
-    const [eMail, setEmail] = useState("");
+    const [first_name, setFirstname] = useState("");
+    const [last_name, setLastname] = useState("");
+    const [email, setEmail] = useState("");
     const [gender, setGender] = useState("");
-    const [userName, setUsername] = useState("");
+    const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
 
@@ -71,14 +71,16 @@
         e.preventDefault();
     
         const User = {
-            firstName,
-            lastName,
-            eMail,
+            username,
+            first_name,
+            last_name,
+            email,
             gender,
             birthday,
-            userName,
             password
          };
+
+        console.log(User);
 
         //TODO salt og hash password før det sendes til backend
         let response = postFormData(User);
@@ -101,7 +103,7 @@
                     id="firstName-outlined" 
                     label="First Name" 
                     variant="outlined" 
-                    value={firstName}
+                    value={first_name}
                     onChange={(event) => setFirstname(event.target.value)} 
                 />
             </FormControl>
@@ -110,7 +112,7 @@
                     id="lastName-outlined"
                     label="Last Name" 
                     variant="outlined" 
-                    value={lastName}
+                    value={last_name}
                     onChange={(event) => setLastname(event.target.value)}  
                 />
             </FormControl>
@@ -119,7 +121,7 @@
                     id="email-outlined" 
                     label="Email" 
                     variant="outlined" 
-                    value={eMail}
+                    value={email}
                     onChange={(event) => setEmail(event.target.value)}  
                 />
             </FormControl>
@@ -155,7 +157,7 @@
                     id="Username-outlined" 
                     label="User Name" 
                     variant="outlined" 
-                    value={userName}
+                    value={username}
                     onChange={(event) => setUsername(event.target.value)}  
                 />
             </FormControl>
