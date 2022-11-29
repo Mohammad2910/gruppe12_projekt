@@ -11,6 +11,7 @@ import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import SingleStrain from './pages/SingleStrainPage/SingleStrainPage'
 import CategoryStrainpage from "./pages/CategoryStrainpage";
+import Profile from "./pages/Profile/profile";
 
 function App() {
 
@@ -41,6 +42,7 @@ const DefaultContainer = () => (
                     <Route path="/distributor" element={<Distributor/>} />
                     <Route path="/strains/category/:id" element={<CategoryStrainpage/>}/>
                     <Route path="/strains/:id" element={<SingleStrain/>}/>
+                    <Route path="/profile/" element={<Profile/>}/>
                     {/*<Route path="/*" element={<h1>Error</h1>} />*/}
                 </Routes>
             </main>
