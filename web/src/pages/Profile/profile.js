@@ -20,6 +20,23 @@ const Profile = () => {
         user.birthday = newValue;
     }
 
+    let handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            fetch('http://localhost:8080/api/users', {
+                method : 'PUT',
+                body: JSON.stringify(user),
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'}
+            }).then(function(response) {
+                return response.json();
+            });
+        } catch (err) {
+            console.log(err);
+        }
+    };
+
     return (
         <div>
             <br/><br/>
@@ -106,7 +123,7 @@ const Profile = () => {
                 <FormControlLabel value={user.gender} control={<Radio disabled={!editMode}/>} label="Other"/>
 
             </RadioGroup>
-                <Button color="primary" size="large" type="submit" variant="contained" hidden={!editMode}>
+                <Button color="primary" size="large" type="submit" variant="contained" hidden={!editMode} onClick={handleSubmit}>
                     Save
                 </Button>
         </div>
