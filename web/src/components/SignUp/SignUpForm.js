@@ -58,8 +58,8 @@
  const Form = () => {
     const navigate = useNavigate();
     const [birthday, setBirthday] = useState(dayjs());
-    const [first_name, setFirstname] = useState("");
-    const [last_name, setLastname] = useState("");
+    const [firstName, setFirstname] = useState("");
+    const [lastName, setLastname] = useState("");
     const [email, setEmail] = useState("");
     const [gender, setGender] = useState("");
     const [username, setUsername] = useState("");
@@ -71,8 +71,8 @@
     
         const User = {
             username,
-            first_name,
-            last_name,
+            firstName,
+            lastName,
             email,
             gender,
             birthday,
@@ -106,7 +106,7 @@
                     id="firstName-outlined" 
                     label="First Name" 
                     variant="outlined" 
-                    value={first_name}
+                    value={firstName}
                     onChange={(event) => setFirstname(event.target.value)} 
                 />
             </FormControl>
@@ -115,7 +115,7 @@
                     id="lastName-outlined"
                     label="Last Name" 
                     variant="outlined" 
-                    value={last_name}
+                    value={lastName}
                     onChange={(event) => setLastname(event.target.value)}  
                 />
             </FormControl>
@@ -211,7 +211,7 @@
  */
 async function postFormData(User) {
     try {
-        let res = await fetch('http://localhost:8080/api/users', {
+        let res = await fetch('https://grp12.servecounterstrike.com/api/users', {
             method : 'POST',
             body: JSON.stringify(User),
             headers: {"Content-Type" : "application/json"}
