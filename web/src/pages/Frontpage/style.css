@@ -9,12 +9,12 @@
 }
 
 .carousel-item {
-    height: 100vh;
-    min-height: 300px;
+    /*height: 100vh;*/
+    min-height: 224px;
 }
 
 .carousel-caption {
-    bottom: 240px;
+    /*bottom: 100px;*/
     z-index: 2;
 }
 
@@ -23,6 +23,7 @@
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-top: 25px;
+    color: #fff !important;
 }
 
 .carousel-caption p {
@@ -56,19 +57,26 @@
     z-index: 1;
 }
 
-.team .card{
+.team .card {
 
-    box-shadow: 6px 6px 6px 10px rgba(0,0,0,0.10);
+    box-shadow: 6px 6px 6px 10px rgba(0, 0, 0, 0.10);
+
+}
+
+@media screen and (min-width: 992px) and (max-width: 3000px) {
+    .carousel-caption {
+        bottom: 145px;
+    }
 
 }
 
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-    .carousel-caption {
-        bottom: 300px;
-    }
+    /* .carousel-caption {
+         bottom: 300px;
+     }*/
     .carousel-caption h5 {
-        font-size: 30px;
+        font-size: 25px;
         text-transform: uppercase;
         letter-spacing: 2px;
         margin-top: 25px;
@@ -76,27 +84,38 @@
 
     .carousel-caption p {
         width: 100%;
-        font-size: 15px;
+        font-size: 14px;
     }
+
+    .carousel-caption a {
+        width: 10rem;
+        height: auto;
+        font-size: .7rem;
+    }
+
+    .carousel-caption {
+        bottom: 100px;
+        z-index: 2;
+    }
+
     .team .card {
         margin-top: 30px;
     }
 }
 
 @media only screen and (max-width: 767px) {
-    .carousel-caption {
-        bottom: 280px;
-    }
-
+    /*  .carousel-caption {
+          bottom: 280px;
+      }*/
     .carousel-caption h5 {
         font-size: 17px;
     }
 
     .carousel-caption a {
-        padding: 10px 15px;
+        /* padding: 10px 15px;*/
         width: 10rem;
         height: auto;
-        font-size: .7rem;
+        font-size: .6rem;
     }
 
     .carousel-caption p {
