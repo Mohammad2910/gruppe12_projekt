@@ -6,7 +6,7 @@ import './style.css';
 const Navbar = () => {
     return (
         <div className="header">
-            <nav className="navbar navbar-expand-md fixed-top">
+            <nav className="navbar navbar-expand-md navbar-light fixed-top">
                 <div className="container-fluid">
                     <Link className="navbar-brand" to='/home'>
                         <img
@@ -16,22 +16,22 @@ const Navbar = () => {
                     <button className="navbar-toggler"
                             type="button"
                             data-bs-toggle="collapse"
-                            data-bs-target="#toggleMobileMenu"
-                            aria-controls="toggleMobileMenu"
+                            data-bs-target="#navbarNav"
+                            aria-controls="navbarNav"
                             aria-expanded="false"
                             aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"/>
+                        <i className="fa fa-bars"/>
                     </button>
-                    <div className="collapse navbar-collapse" id="toggleMobileMenu">
+                    <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <Link className="nav-link active" aria-current="page" to='/strains'>Strains</Link>
+                                <Link className="nav-link " aria-current="page" to='/strains'>Strains</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link active" to='/distributor'>Distributors</Link>
+                                <Link className="nav-link " to='/distributor'>Distributors</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link active" to='/profile'>Profile</Link>
+                                <Link className="nav-link " to='/profile'>Profile</Link>
                             </li>
                         </ul>
                         <div className="d-flex nav-item">
