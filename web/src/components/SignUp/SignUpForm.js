@@ -17,7 +17,7 @@
  import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
  import dayjs from 'dayjs';
  import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
- import { Link } from "react-router-dom";
+ import {Link, Navigate, useNavigate} from "react-router-dom";
  import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider/LocalizationProvider";
 
  
@@ -57,7 +57,7 @@
   * @returns all the components of the form
   */
  const Form = () => {
-    
+    const navigate = useNavigate();
     const [birthday, setBirthday] = useState(dayjs());
     const [first_name, setFirstname] = useState("");
     const [last_name, setLastname] = useState("");
@@ -80,7 +80,6 @@
             password
          };
 
-        console.log(User);
 
         //TODO salt og hash password før det sendes til backend
         let response = postFormData(User);
@@ -206,15 +205,25 @@
  * Function for posting user data to the backend 
  * @param {*} User object populated with user data from the sign-up form
  */
-function postFormData(User) {
-    console.log(User, JSON.stringify(User));
-    fetch('http://localhost:8080/api/users', {
-        method : 'POST',
-        body: JSON.stringify(User),
-        headers: {"Content-Type" : "application/json"}
-    }).then(function(response) {
-        return response.json();
-    });
+async function postFormData(User) {
+    try {
+        let res = await fetch('http://localhost:8080/api/users', {
+            method : 'POST',
+            body: JSON.stringify(User),
+            headers: {"Content-Type" : "application/json"}
+        }).then(function(response) {
+            return response.json();
+        });
+
+        await res.json();
+        if (res.status === 201) {
+            window.alert("User created");
+        } else {
+            window.alert("Some error occured");
+        }
+    } catch (err) {
+        console.log(err);
+    }
     
  }
 
