@@ -8,7 +8,7 @@ class Footer extends Component {
                     <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                         <h5 className="text-uppercase mb-4 font-weight-bold text-white">About Us</h5>
                         <hr className="mb-4"/>
-                        <p>We are a group of 5 software developers. We have made this application to help people navigate through the wilderness of medicinal cannabis.</p>
+                        <p>We are a group of 5 software developers. We have created this application to help people navigate through the wilderness of medicinal cannabis.</p>
                     </div>
                     {/*<div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">*/}
                     {/*    <h5 className="text-uppercase mb-4 font-weight-bold text-white">Let Us Help</h5>*/}
@@ -37,7 +37,7 @@ class Footer extends Component {
                         </p>
                         <p>
                             <li className="fas fa-envelope me-2"/>
-                            something@something.something
+                            s195491@student.dtu.dk
                         </p>
                         <p>
                             <li className="fas fa-phone me-2"/>

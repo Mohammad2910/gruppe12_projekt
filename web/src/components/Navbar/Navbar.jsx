@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 const Navbar = () => {
     const style = {
         paddingBottom: '20px'
+
     }
     return (
         <div style={style}>
@@ -11,7 +12,7 @@ const Navbar = () => {
                 <div className="container-fluid">
                     <Link className="navbar-brand" to='/home'>
                         <img
-                            src="https://img.freepik.com/premium-vector/weed-leaf-colorful-vintage-style-logo-illustrations_228886-396.jpg?w=900"
+                            src="./navbarlogo.png"
                             className="rounded-circle App-logo" width="45" height="40" alt="logo"/>
                     </Link>
                     <button className="navbar-toggler"
