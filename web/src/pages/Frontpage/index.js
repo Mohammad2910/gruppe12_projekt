@@ -64,11 +64,8 @@ const Frontpage = () => {
                     </button>
                 </div>
 
-
-
-
-                <section id="team" className="services section-padding">
-                    <div className="container mt-5">
+                <section id="team" className="team section-padding">
+                    <div className="container mt-2">
                         <div className="row">
                             <div className="col-md-12">
                                 <div className="section-header text-center pb-5">
@@ -84,10 +81,10 @@ const Frontpage = () => {
                                     <img
                                         src="https://media-exp1.licdn.com/dms/image/D4E03AQG00iU_iPyHmg/profile-displayphoto-shrink_800_800/0/1669586418046?e=1675296000&v=beta&t=i9RQIQPlQkJvLRpN9gxuwswRwS9wCQy-dVg8qm695Yo"
                                         alt="" height="200" width="200" className="img-fluid rounded-circle"/>
-                                    <h3 className="card-title mt-2">
+                                    <h3 className="card-title py-2">
                                         David Mikkelsen
                                     </h3>
-                                    <p className="lead">Software developer at DTU. Server technician and Linux expert. </p>
+                                    <p className="card-text">Software developer at DTU. Server technician and Linux expert. </p>
                                 </div>
                             </div>
                         </div>
@@ -97,10 +94,10 @@ const Frontpage = () => {
                                     <img
                                         src="https://media-exp1.licdn.com/dms/image/C4E03AQFwnJrroKkavg/profile-displayphoto-shrink_800_800/0/1638973555826?e=1675296000&v=beta&t=8WIBTb_wuAfbQlruddp3FAaLUpCSQeLRWjtEYbCBCB8"
                                         alt="" height="200" width="200" className="img-fluid rounded-circle"/>
-                                    <h3 className="card-title mt-2">
+                                    <h3 className="card-title py-2">
                                         Anthony Haidari
                                     </h3>
-                                    <p className="lead">Software developer at DTU. In charge of frontend and design.</p>
+                                    <p className="card-text">Software developer at DTU. In charge of frontend and design.</p>
                                 </div>
                             </div>
                         </div>
@@ -110,10 +107,10 @@ const Frontpage = () => {
                                     <img
                                         src="https://media-exp1.licdn.com/dms/image/C4D03AQH0-9M9uBtiEQ/profile-displayphoto-shrink_800_800/0/1664274348369?e=1675296000&v=beta&t=uHcr0Yxd0IRQJR-rEm7CEBP7hFWLGKGRnvtX8ZJTyG0"
                                         alt="" height="200" width="200" className="img-fluid rounded-circle"/>
-                                    <h3 className="card-title mt-2">
+                                    <h3 className="card-title py-2">
                                         Johan Kryger
                                     </h3>
-                                    <p className="lead">Software developer at DTU. In charge of system monitoring and data analysis. </p>
+                                    <p className="card-text">Software developer at DTU. In charge of system monitoring and data analysis. </p>
                                 </div>
                             </div>
                         </div>
@@ -126,10 +123,10 @@ const Frontpage = () => {
                                     <img
                                         src="https://media-exp1.licdn.com/dms/image/C4E03AQGhQEVtnya4ow/profile-displayphoto-shrink_800_800/0/1634983808829?e=1675296000&v=beta&t=NurLdXi6L_FuuyswMUJAeVc9VrAGjLmMHAxWNVBkCGQ"
                                         alt="" height="200" width="200" className="img-fluid rounded-circle"/>
-                                    <h3 className="card-title mt-2">
+                                    <h3 className="card-title py-2">
                                         Andreas Petersen
                                     </h3>
-                                    <p className="lead">Software developer at DTU. Backend technician and arcitecht.</p>
+                                    <p className="card-text">Software developer at DTU. Backend technician and arcitecht.</p>
                                 </div>
                             </div>
                         </div>
@@ -139,10 +136,10 @@ const Frontpage = () => {
                                     <img
                                         src="https://media-exp1.licdn.com/dms/image/D4E03AQHOiYGTWHvD8g/profile-displayphoto-shrink_800_800/0/1664473758323?e=1675296000&v=beta&t=XSKA3JF7EPcGqZ8lzelpJcRGuhrpMUECQEb8ON2w0xo"
                                         alt="" height="200" width="200" className="img-fluid rounded-circle"/>
-                                    <h3 className="card-title mt-2">
+                                    <h3 className="card-title py-2">
                                         Mohammad Uddin
                                     </h3>
-                                    <p className="lead">Software developer at DTU. Deployment and operations expert.</p>
+                                    <p className="card-text">Software developer at DTU. Deployment and operations expert.</p>
                                 </div>
                             </div>
                         </div>

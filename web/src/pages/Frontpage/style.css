@@ -17,12 +17,12 @@ body {
 }
 
 .carousel-caption {
-    bottom: 220px;
+    bottom: 240px;
     z-index: 2;
 }
 
 .carousel-caption h5 {
-    font-size: 40px;
+    font-size: 35px;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-top: 25px;
@@ -37,14 +37,14 @@ body {
 }
 
 .carousel-caption a {
-    text-transform: uppercase;
+    width: 15rem;
     text-decoration: none;
-    background: crimson;
     padding: 5px 20px;
     display: inline-block;
     color: #fff;
-    margin-top: 15px;
-    border-radius: 5px;
+    margin-top: 20px;
+    border-radius: 3rem;
+    border: none;
 
 }
 
@@ -59,20 +59,36 @@ body {
     z-index: 1;
 }
 
+.team .card{
+
+    box-shadow: 6px 6px 6px 10px rgba(0,0,0,0.10);
+
+}
+
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
     .carousel-caption {
-        bottom: 350px;
+        bottom: 300px;
+    }
+    .carousel-caption h5 {
+        font-size: 30px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-top: 25px;
     }
 
     .carousel-caption p {
         width: 100%;
+        font-size: 15px;
+    }
+    .team .card {
+        margin-top: 30px;
     }
 }
 
 @media only screen and (max-width: 767px) {
     .carousel-caption {
-        bottom: 125px;
+        bottom: 280px;
     }
 
     .carousel-caption h5 {
@@ -81,6 +97,9 @@ body {
 
     .carousel-caption a {
         padding: 10px 15px;
+        width: 10rem;
+        height: auto;
+        font-size: .7rem;
     }
 
     .carousel-caption p {
@@ -90,6 +109,6 @@ body {
     }
 
     .team .card {
-        box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
+        margin-top: 30px;
     }
 }
