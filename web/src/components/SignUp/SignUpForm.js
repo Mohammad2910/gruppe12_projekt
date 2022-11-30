@@ -221,9 +221,8 @@ async function postFormData(User) {
 
         await res.json();
         if (res.status === 201) {
-            window.alert("User created");
-            // useNavigation().location('/');
-            // // alert(`response`);
+            alert("User created")
+            window.location.href = "/"
 
         } else {
             window.alert("Some error occured");

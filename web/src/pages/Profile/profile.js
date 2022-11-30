@@ -12,6 +12,11 @@ import {AdapterDayjs} from "@mui/x-date-pickers/AdapterDayjs";
 
 const Profile = observer(() => {
 
+    const token = localStorage.getItem("grp12-jwt");
+    if (!token) {
+        window.location.href = "/"
+    }
+
     let user = profileStore.user;
     const [editMode, setEditMode] = useState(false);
     const buttonHandler = () => {
