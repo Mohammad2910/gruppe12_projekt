@@ -7,8 +7,8 @@ COPY /web/public ./public
 
 # ==== BUILD =====
 # Install dependencies (npm ci makes sure the exact versions in the lockfile gets installed)
-RUN npm install --force
-# RUN npm ci --force
+# RUN npm install --force
+RUN npm ci --force
 # Build the app
 RUN npm run build
 
