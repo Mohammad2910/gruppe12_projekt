@@ -64,30 +64,6 @@ const Frontpage = () => {
                     </button>
                 </div>
 
-                <section className="about section-padding mt-4">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-lg-4 col-md-12 col-12">
-                                <div className="about-img">
-                                    <img
-                                        src="https://img.freepik.com/free-photo/elderly-female-smiling-with-young-female-doctor-visiting-senior-patient-woman-hospital-ward_1150-21714.jpg?w=1380&t=st=1669584732~exp=1669585332~hmac=2566cbc0c318bf4a0e120f224b6ba52db8df34bea4a6a7dacf8c31d5ea2d7f69"
-                                        alt="" className="img-fluid"/>
-                                </div>
-                            </div>
-                            <div className="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
-                                <div className="about-text">
-                                    <h2>We Provide Best Quality <br/>Weed Ever</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium animi
-                                        architecto asperiores assumenda beatae deserunt dicta ea eum explicabo harum
-                                        illum in incidunt laudantium minima molestiae molestias nisi officia placeat
-                                        possimus quae quasi qui quibusdam quidem quis quisquam rem saepe sed, sint
-                                        tenetur ullam ut velit vero voluptatibus. Debitis, possimus?</p>
-                                    <button className="btn btn-warning">Learn More</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
 
 
 
@@ -111,9 +87,7 @@ const Frontpage = () => {
                                     <h3 className="card-title mt-2">
                                         David Mikkelsen
                                     </h3>
-                                    <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Aspernatur beatae distinctio optio similique temporibus ullam voluptates. Culpa
-                                        dolore nobis quis!</p>
+                                    <p className="lead">Software developer at DTU. Server technician and Linux expert. </p>
                                 </div>
                             </div>
                         </div>
@@ -126,9 +100,7 @@ const Frontpage = () => {
                                     <h3 className="card-title mt-2">
                                         Anthony Haidari
                                     </h3>
-                                    <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Aspernatur beatae distinctio optio similique temporibus ullam voluptates. Culpa
-                                        dolore nobis quis!</p>
+                                    <p className="lead">Software developer at DTU. In charge of frontend and design.</p>
                                 </div>
                             </div>
                         </div>
@@ -141,9 +113,7 @@ const Frontpage = () => {
                                     <h3 className="card-title mt-2">
                                         Johan Kryger
                                     </h3>
-                                    <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Aspernatur beatae distinctio optio similique temporibus ullam voluptates. Culpa
-                                        dolore nobis quis!</p>
+                                    <p className="lead">Software developer at DTU. In charge of system monitoring and data analysis. </p>
                                 </div>
                             </div>
                         </div>
@@ -159,10 +129,7 @@ const Frontpage = () => {
                                     <h3 className="card-title mt-2">
                                         Andreas Petersen
                                     </h3>
-                                    <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Aspernatur beatae distinctio optio similique temporibus ullam voluptates.
-                                        Culpa
-                                        dolore nobis quis!</p>
+                                    <p className="lead">Software developer at DTU. Backend technician and arcitecht.</p>
                                 </div>
                             </div>
                         </div>
@@ -175,10 +142,7 @@ const Frontpage = () => {
                                     <h3 className="card-title mt-2">
                                         Mohammad Uddin
                                     </h3>
-                                    <p className="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                        Aspernatur beatae distinctio optio similique temporibus ullam voluptates.
-                                        Culpa
-                                        dolore nobis quis!</p>
+                                    <p className="lead">Software developer at DTU. Deployment and operations expert.</p>
                                 </div>
                             </div>
                         </div>
