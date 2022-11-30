@@ -4,13 +4,9 @@ import './style.css';
 
 
 const Navbar = () => {
-    const style = {
-        paddingBottom: '20px'
-
-    }
     return (
-        <div style={style}>
-            <nav className="navbar navbar-expand-md navbar-light bg-light fixed-top">
+        <div className="header">
+            <nav className="navbar navbar-expand-md fixed-top">
                 <div className="container-fluid">
                     <Link className="navbar-brand" to='/home'>
                         <img
