@@ -6,6 +6,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./LoginForm.css";
+
+const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const response = await fetch('/api/login', {
+        method: "POST",
+        body: JSON.stringify({
+            "username": e.target.username.value,
+            "password": e.target.password.value
+        })
+    });
+
+    if (response.status === 200) {
+        localStorage.setItem("grp12-jwt", response.body)
+        window.location.href = "/home";
+    } else {
+        alert(response.body)
+    }
+} 
+
+
 /**
  * Function component for a login-form consisting of a title, two input fields and a
  * submit button.
@@ -15,9 +36,9 @@ function LoginForm() {
     return(
         <div className="login-form">
             <FormTitle title="Sign In" />
-            <form>
-                <InputField label="Username" type="text"/>
-                <InputField label="Password" type="password" />                    
+            <form onSubmit={handleSubmit()}>
+                <InputField label="Username" type="text" name="username"/>
+                <InputField label="Password" type="password" name="password"/>                    
                 {/* <SubmitButton /> */}
                 <SubmitButton/>
             </form>
@@ -35,7 +56,7 @@ const InputField = (props) => {
     return(
         <div className="input-container">
         <label>{props.label}</label>
-        <input type={props.type} />
+        <input type={props.type} name={props.name} />
     </div>
     );
 }
@@ -47,7 +68,7 @@ const InputField = (props) => {
 const SubmitButton = () => {
     return(
         <div className="button-container">
-            <Link to='/home'><input type="submit" value='Login'/></Link>
+            <input type="submit" value='Login'/>
         </div>
     );
 }
