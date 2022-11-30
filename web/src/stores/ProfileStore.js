@@ -8,11 +8,19 @@ class ProfileStore {
     }
 
     fetchUser() {
-        fetch('http://localhost:8080/api/users/test')
+        const token = localStorage.getItem("grp12-jwt");
+
+        if (token) {
+            fetch('https://grp12.servecounterstrike.com/api/users/current/profile', {
+                headers: {
+                    "Authorization": token
+                }
+            })
             .then((response) => response.json())
             .then((json) => {
                 runInAction(() => this.user = json)
             })
+        }
     }
 }
 
