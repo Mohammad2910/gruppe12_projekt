@@ -185,7 +185,7 @@
                 </Button>
             </FormControl>
             <FormControl sx={{ m: 1, width: '20ch' }}>
-                <Link to='/login'>Back to login</Link>
+                <Link to='/'>Back to login</Link>
             </FormControl>
 
          </div>
