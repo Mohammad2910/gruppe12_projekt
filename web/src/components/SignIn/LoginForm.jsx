@@ -36,7 +36,7 @@ function LoginForm() {
     return(
         <div className="login-form">
             <FormTitle title="Sign In" />
-            <form onSubmit={handleSubmit()}>
+            <form onSubmit={handleSubmit}>
                 <InputField label="Username" type="text" name="username"/>
                 <InputField label="Password" type="password" name="password"/>                    
                 {/* <SubmitButton /> */}
