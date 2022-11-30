@@ -31,24 +31,24 @@ function App() {
 }
 
 const DefaultContainer = () => (
-    <div>
-        <div className="container">
-            <Navbar/>
-            <main>
-                <Routes>
+        <div>
+            <div className="container">
+                <Navbar/>
+                <main>
+                    <Routes>
 
-                    <Route path="/home" element={<Frontpage/>}/>
+                        <Route path="/home" element={<Frontpage/>}/>
                     <Route path="/strains" element={<Strainpage/>} />
                     <Route path="/distributor" element={<Distributor/>} />
-                    <Route path="/strains/category/:id" element={<CategoryStrainpage/>}/>
-                    <Route path="/strains/:id" element={<SingleStrain/>}/>
-                    <Route path="/profile/" element={<Profile/>}/>
-                    {/*<Route path="/*" element={<h1>Error</h1>} />*/}
-                </Routes>
-            </main>
-            <Footer/>
+                        <Route path="/strains/category/:id" element={<CategoryStrainpage/>}/>
+                        <Route path="/strains/:id" element={<SingleStrain/>}/>
+                        <Route path="/profile/" element={<Profile/>}/>
+                        {/*<Route path="/*" element={<h1>Error</h1>} />*/}
+                    </Routes>
+                </main>
+                <Footer/>
+            </div>
         </div>
-    </div>
-)
+    )
 
 export default App

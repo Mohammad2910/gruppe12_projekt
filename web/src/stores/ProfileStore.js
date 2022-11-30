@@ -13,7 +13,7 @@ class ProfileStore {
         if (token) {
             fetch('https://grp12.servecounterstrike.com/api/users/current/profile', {
                 headers: {
-                    "Authorization": token
+                    "Authorization": "Bearer " + token
                 }
             })
             .then((response) => response.json())

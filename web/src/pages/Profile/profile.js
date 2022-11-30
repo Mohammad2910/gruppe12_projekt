@@ -1,4 +1,5 @@
 import {profileStore} from "../../stores/ProfileStore";
+import {observer} from "mobx-react-lite";
 import TextField from "@mui/material/TextField";
 import React, {useState} from "react";
 import Button from "@mui/material/Button";
@@ -9,7 +10,8 @@ import {FormLabel} from "@mui/material";
 import {DesktopDatePicker, LocalizationProvider} from "@mui/x-date-pickers";
 import {AdapterDayjs} from "@mui/x-date-pickers/AdapterDayjs";
 
-const Profile = () => {
+const Profile = observer(() => {
+
     let user = profileStore.user;
     const [editMode, setEditMode] = useState(false);
     const buttonHandler = () => {
@@ -23,7 +25,7 @@ const Profile = () => {
     let handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            fetch('http://localhost:8080/api/users', {
+            fetch('https://grp12.servecounterstrike.com/api/users', {
                 method : 'PUT',
                 body: JSON.stringify(user),
                 headers: {
@@ -45,25 +47,25 @@ const Profile = () => {
             <Button variant="contained" color="error" sx={{ m: 2, width: '20ch' }}>Delete</Button>
             <TextField
                 margin="dense"
-                id="first_name"
+                id="firstname"
                 label="First name"
                 type="name"
                 fullWidth
                 variant="standard"
-                value={user?.first_name}
+                value={user?.firstName}
                 disabled={!editMode}
-                onChange={(e) => user.first_name = e.target.value}
+                onChange={(e) => user.firstName = e.target.value}
             />
             <TextField
                 margin="dense"
-                id="last_name"
+                id="lastName"
                 label="Last name"
                 type="name"
                 fullWidth
                 variant="standard"
-                value={user?.last_name}
+                value={user?.lastName}
                 disabled={!editMode}
-                onChange={(e) => user.last_name = e.target.value}
+                onChange={(e) => user.lastName = e.target.value}
             />
             <TextField
                 margin="dense"
@@ -126,6 +128,6 @@ const Profile = () => {
                 </Button>
         </div>
     );
-}
+})
 
 export default Profile
