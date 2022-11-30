@@ -3,7 +3,7 @@
 }
 
 .header nav {
-    background-image: linear-gradient(-90deg, #99f3c8, #01d28e);
+    background-image: linear-gradient(-90deg, #afe597, #7faf3a);
 }
 
 .nav-link {
@@ -12,15 +12,16 @@
     color: #fff !important;
     font-weight: 500;
 }
-.navbar-nav{
+
+.navbar-nav {
     text-align: right;
     margin-right: 20px;
 }
 
-.header .navbar-toggler{
+.header .navbar-toggler {
     padding-right: 20px;
-    outline: none!important;
-    border: none!important;
+    outline: none !important;
+    border: none !important;
 }
 
 .nav-link:hover {
@@ -43,7 +44,7 @@
         border-bottom: none !important;
     }
 
-    .header .btn{
+    .header .btn {
         alignment: center;
     }
 

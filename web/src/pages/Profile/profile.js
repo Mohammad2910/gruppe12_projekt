@@ -39,9 +39,9 @@ const Profile = () => {
 
     return (
         <div>
-            <h1>Din profil</h1>
+            <h1>Your Profile</h1>
             <br/>
-            <Button variant="contained" onClick={buttonHandler} sx={{ m: 2, width: '20ch' }}>Redigér</Button>
+            <Button variant="contained" onClick={buttonHandler} sx={{ m: 2, width: '20ch' }}>Edit</Button>
             <Button variant="contained" color="error" sx={{ m: 2, width: '20ch' }}>Delete</Button>
             <TextField
                 margin="dense"
