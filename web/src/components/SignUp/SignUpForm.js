@@ -17,7 +17,7 @@
  import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
  import dayjs from 'dayjs';
  import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
- import {Link, Navigate, useNavigate} from "react-router-dom";
+ import {Link, Navigate, useNavigate, useNavigation} from "react-router-dom";
  import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider/LocalizationProvider";
 
  
@@ -83,10 +83,15 @@
 
         //TODO salt og hash password før det sendes til backend
         let response = postFormData(User);
-        //alert(`${response}`);
+        alert('User created succesfully');
+        setBirthday(dayjs());
+        setFirstname("");
+        setLastname("");
+        setEmail("");
+        setGender("");
+        setUsername("");
+        setPassword("");
 
-        
-        
     }
 
     const handleChangeBirthday = (newValue) => {
@@ -180,7 +185,7 @@
                 </Button>
             </FormControl>
             <FormControl sx={{ m: 1, width: '20ch' }}>
-                <Link to='/home'>Back to home</Link>
+                <Link to='/login'>Back to login</Link>
             </FormControl>
 
          </div>
@@ -218,6 +223,9 @@ async function postFormData(User) {
         await res.json();
         if (res.status === 201) {
             window.alert("User created");
+            // useNavigation().location('/');
+            // // alert(`response`);
+
         } else {
             window.alert("Some error occured");
         }
