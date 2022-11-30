@@ -2,6 +2,7 @@ FROM node:18-slim AS REACT
 # Set the working directory to /app inside the container
 WORKDIR /app
 COPY /web/package.json  ./
+COPY /web/package-lock.json  ./
 COPY /web/src ./src
 COPY /web/public ./public
 
