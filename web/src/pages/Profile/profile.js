@@ -24,12 +24,13 @@ const Profile = () => {
         e.preventDefault();
         try {
             fetch('http://localhost:8080/api/users', {
-                method : 'PUT',
+                method: 'PUT',
                 body: JSON.stringify(user),
                 headers: {
                     'Accept': 'application/json',
-                    'Content-Type': 'application/json'}
-            }).then(function(response) {
+                    'Content-Type': 'application/json'
+                }
+            }).then(function (response) {
                 return response.json();
             });
         } catch (err) {
@@ -41,8 +42,8 @@ const Profile = () => {
         <div>
             <h1>Your Profile</h1>
             <br/>
-            <Button variant="contained" onClick={buttonHandler} sx={{ m: 2, width: '20ch' }}>Edit</Button>
-            <Button variant="contained" color="error" sx={{ m: 2, width: '20ch' }}>Delete</Button>
+            <Button variant="contained" onClick={buttonHandler} sx={{m: 2, width: '20ch'}}>Edit</Button>
+            <Button variant="contained" color="error" sx={{m: 2, width: '20ch'}}>Delete</Button>
             <TextField
                 margin="dense"
                 id="first_name"
@@ -110,20 +111,31 @@ const Profile = () => {
             />
             <FormLabel>Gender</FormLabel>
             <RadioGroup row name="radio-row-buttons" onChange={(event) => user.gender = event.target.value}>
-                <FormControlLabel value="Female" checked={user?.gender === "Female"} control={<Radio disabled={!editMode}/>} label="Female"/>
-                <FormControlLabel value="Male" checked={user?.gender === "Male"} control={<Radio disabled={!editMode}/>} label="Male"/>
-                <FormControlLabel value="Gender fluid" checked={user?.gender === "Gender fluid"} control={<Radio disabled={!editMode}/>} label="Gender fluid"/>
-                <FormControlLabel value="Transgender" checked={user?.gender === "Transgender"} control={<Radio disabled={!editMode}/>} label="Transgender"/>
-                <FormControlLabel value="Transgender man" checked={user?.gender === "Transgender man"} control={<Radio disabled={!editMode}/>} label="Transgender man"/>
-                <FormControlLabel value="Transgender woman" checked={user?.gender === "Transgender woman"} control={<Radio disabled={!editMode}/>} label="Transgender woman"/>
-                <FormControlLabel value="Non-Binary" checked={user?.gender === "Non-Binary"} control={<Radio disabled={!editMode}/>} label="Non-Binary"/>
-                <FormControlLabel value="Bigender" checked={user?.gender === "Bigender"} control={<Radio disabled={!editMode}/>} label="Bigender"/>
-                <FormControlLabel value="Agender" checked={user?.gender === "Agender"} control={<Radio disabled={!editMode}/>} label="Agender"/>
-                <FormControlLabel value="Other" checked={user?.gender === "Other"} control={<Radio disabled={!editMode}/>} label="Other"/>
+                <FormControlLabel value="Female" checked={user?.gender === "Female"}
+                                  control={<Radio disabled={!editMode}/>} label="Female"/>
+                <FormControlLabel value="Male" checked={user?.gender === "Male"} control={<Radio disabled={!editMode}/>}
+                                  label="Male"/>
+                <FormControlLabel value="Gender fluid" checked={user?.gender === "Gender fluid"}
+                                  control={<Radio disabled={!editMode}/>} label="Gender fluid"/>
+                <FormControlLabel value="Transgender" checked={user?.gender === "Transgender"}
+                                  control={<Radio disabled={!editMode}/>} label="Transgender"/>
+                <FormControlLabel value="Transgender man" checked={user?.gender === "Transgender man"}
+                                  control={<Radio disabled={!editMode}/>} label="Transgender man"/>
+                <FormControlLabel value="Transgender woman" checked={user?.gender === "Transgender woman"}
+                                  control={<Radio disabled={!editMode}/>} label="Transgender woman"/>
+                <FormControlLabel value="Non-Binary" checked={user?.gender === "Non-Binary"}
+                                  control={<Radio disabled={!editMode}/>} label="Non-Binary"/>
+                <FormControlLabel value="Bigender" checked={user?.gender === "Bigender"}
+                                  control={<Radio disabled={!editMode}/>} label="Bigender"/>
+                <FormControlLabel value="Agender" checked={user?.gender === "Agender"}
+                                  control={<Radio disabled={!editMode}/>} label="Agender"/>
+                <FormControlLabel value="Other" checked={user?.gender === "Other"}
+                                  control={<Radio disabled={!editMode}/>} label="Other"/>
             </RadioGroup>
-                <Button color="primary" size="large" type="submit" variant="contained" hidden={!editMode} onClick={handleSubmit}>
-                    Save
-                </Button>
+            <Button color="primary" size="large" type="submit" variant="contained" hidden={!editMode}
+                    onClick={handleSubmit}>
+                Save
+            </Button>
         </div>
     );
 }
