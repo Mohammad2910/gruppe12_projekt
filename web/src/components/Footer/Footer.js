@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 class Footer extends Component {
     render() {
         return (
-            <div className="container-fluid text-white p-3 bg-black">
+            <div className="container-fluid text-white p-3 bg-dark">
                 <div className="row justify-content-around text-center text-md-start">
                     <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                         <h5 className="text-uppercase mb-4 font-weight-bold text-white">About Us</h5>
