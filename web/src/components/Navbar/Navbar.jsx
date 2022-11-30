@@ -1,5 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import './style.css';
+
 
 const Navbar = () => {
     const style = {
@@ -25,7 +27,7 @@ const Navbar = () => {
                         <span className="navbar-toggler-icon"/>
                     </button>
                     <div className="collapse navbar-collapse" id="toggleMobileMenu">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0 text-center">
+                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
                                 <Link className="nav-link active" aria-current="page" to='/strains'>Strains</Link>
                             </li>
