@@ -29,15 +29,14 @@
  function SignUpForm() {
      return(
          <div className="createuser-form">
-             <Grid 
+             <Grid
                  container 
                  direction="column"
                  alignItems="center"
                  justifyContent="flex-end"
               >
                  <Box
-                     width={500} 
-                     height={800}
+                     maxWidth={470}
                      marginTop={10}
                      bgcolor="#f2f2f2"
                      alignItems="center"
@@ -102,7 +101,7 @@
      return(
          <div className="SignUp-form">
              
-            <FormControl sx={{ m: 2, width: '20ch' }}> 
+            <FormControl sx={{ m: 1, width: '20ch' }}>
                 <TextField 
                     id="firstName-outlined" 
                     label="First Name" 
@@ -111,7 +110,7 @@
                     onChange={(event) => setFirstname(event.target.value)} 
                 />
             </FormControl>
-            <FormControl sx={{ m: 2, width: '20ch' }}>
+            <FormControl sx={{ m: 1, width: '20ch' }}>
                 <TextField 
                     id="lastName-outlined"
                     label="Last Name" 
@@ -120,7 +119,7 @@
                     onChange={(event) => setLastname(event.target.value)}  
                 />
             </FormControl>
-            <FormControl fullWidth sx={{ m: 2}}>
+            <FormControl fullWidth sx={{ m: 2 ,width: '80%'}}>
                 <TextField 
                     id="email-outlined" 
                     label="Email" 
@@ -129,7 +128,7 @@
                     onChange={(event) => setEmail(event.target.value)}  
                 />
             </FormControl>
-            <FormControl fullWidth sx={{ m: 2}}>
+            <FormControl fullWidth sx={{ m: 2, width: '80%'}}>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                     <DesktopDatePicker
                         label="Birthday" 
@@ -140,7 +139,7 @@
                     />
                 </LocalizationProvider>
             </FormControl>
-            <FormControl fullWidth sx={{ m: 2}}>
+            <FormControl fullWidth sx={{width:'100%'}} >
                 <RadioGroup row name="radio-row-buttons" onChange={(event) => setGender(event.target.value)} >
                     
                     <FormControlLabel value="Female" control={<Radio />} label="Female" />
@@ -156,7 +155,7 @@
 
                 </RadioGroup>
             </FormControl>
-            <FormControl sx={{ m: 2, width: '20ch' }}>
+            <FormControl sx={{ m: 1, width: '20ch' }}>
                 <TextField 
                     id="Username-outlined" 
                     label="User Name" 
@@ -165,7 +164,7 @@
                     onChange={(event) => setUsername(event.target.value)}  
                 />
             </FormControl>
-            <FormControl sx={{ m: 2, width: '20ch' }}>
+            <FormControl sx={{ m: 1, width: '20ch' }}>
                 <TextField 
                     id="password-outlined" 
                     label="Password" 
@@ -174,7 +173,7 @@
                     onChange={(event) => setPassword(event.target.value)} 
                 />
             </FormControl>
-            <FormControl sx={{ m: 4, width: '20ch' }}>
+            <FormControl sx={{ m: 2, width: '20ch' }}>
                 <Button 
                     color="success" 
                     variant="contained" 
