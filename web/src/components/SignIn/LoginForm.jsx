@@ -10,8 +10,9 @@ import "./LoginForm.css";
 const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const response = await fetch('/api/login', {
+    const response = await fetch('https://grp12.servecounterstrike.com/api/login', {
         method: "POST",
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
             "username": e.target.username.value,
             "password": e.target.password.value
@@ -19,10 +20,11 @@ const handleSubmit = async (e) => {
     });
 
     if (response.status === 200) {
-        localStorage.setItem("grp12-jwt", response.body)
+        const token = await response.text();
+        localStorage.setItem("grp12-jwt", token)
         window.location.href = "/home";
     } else {
-        alert(response.body)
+        alert('Wrong credentials!')
     }
 } 
 
@@ -36,7 +38,7 @@ function LoginForm() {
     return(
         <div className="login-form">
             <FormTitle title="Sign In" />
-            <form onSubmit={handleSubmit()}>
+            <form onSubmit={handleSubmit}>
                 <InputField label="Username" type="text" name="username"/>
                 <InputField label="Password" type="password" name="password"/>                    
                 {/* <SubmitButton /> */}
