@@ -35,16 +35,6 @@ const Navbar = () => {
                             </li>
                         </ul>
                         <div className="d-flex nav-item">
-                            <Link to='/'>
-                                <button type="button" className="btn btn-link px-3 me-2 text-decoration-none">
-                                    Login
-                                </button>
-                            </Link>
-                            <Link to='/signup'>
-                                <button type="button" className="btn btn-block btn-outline-primary me-3">
-                                    Sign up
-                                </button>
-                            </Link>
                         </div>
                     </div>
                 </div>
