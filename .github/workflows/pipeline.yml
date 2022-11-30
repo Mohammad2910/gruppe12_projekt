@@ -8,23 +8,26 @@ on:
 jobs:
   test:
     runs-on: self-hosted
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x, 16.x]
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-          cache-dependency-path: web/package-lock.json
-      - name: Install dependencies
-        working-directory: ./web
-        run: npm ci --force
-      - name: build frontend
-        working-directory: ./web
-        run: npm run build
-      - name: run test
-        working-directory: ./web
-        run: npm test
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+        cache-dependency-path: ./web/package-lock.json
+    - name: Install dependencies
+      working-directory: ./web
+      run: npm ci --force
+    - name: build frontend
+      working-directory: ./web
+      run: npm run build
+    - name: run test
+      working-directory: ./web
+      run: npm test
 
   build-and-deploy:
     needs: [test]
