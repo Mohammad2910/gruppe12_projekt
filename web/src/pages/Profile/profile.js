@@ -10,6 +10,7 @@ import {DesktopDatePicker, LocalizationProvider} from "@mui/x-date-pickers";
 import {AdapterDayjs} from "@mui/x-date-pickers/AdapterDayjs";
 
 const Profile = () => {
+    profileStore.fetchUser();
     let user = profileStore.user;
     const [editMode, setEditMode] = useState(false);
     const buttonHandler = () => {
@@ -51,7 +52,7 @@ const Profile = () => {
                 type="name"
                 fullWidth
                 variant="standard"
-                value={user.first_name}
+                value={user?.first_name}
                 disabled={!editMode}
                 onChange={(e) => user.first_name = e.target.value}
             />
@@ -62,7 +63,7 @@ const Profile = () => {
                 type="name"
                 fullWidth
                 variant="standard"
-                value={user.last_name}
+                value={user?.last_name}
                 disabled={!editMode}
                 onChange={(e) => user.last_name = e.target.value}
             />
@@ -73,7 +74,7 @@ const Profile = () => {
                 type="name"
                 fullWidth
                 variant="standard"
-                value={user.email}
+                value={user?.email}
                 disabled={!editMode}
                 onChange={(e) => user.email = e.target.value}
             />
@@ -82,7 +83,7 @@ const Profile = () => {
                 <DesktopDatePicker
                     label="Birthday"
                     inputFormat="MM/DD/YYYY"
-                    value={user.birthday}
+                    value={user?.birthday}
                     renderInput={(params) => <TextField{...params} required/>}
                     disabled={!editMode}
                     onChange={handleChangeBirthday}
@@ -95,7 +96,7 @@ const Profile = () => {
                 type="name"
                 fullWidth
                 variant="standard"
-                value={user.username}
+                value={user?.username}
                 disabled={true}
             />
             <TextField
@@ -105,23 +106,22 @@ const Profile = () => {
                 type="name"
                 fullWidth
                 variant="standard"
-                value={user.password}
+                value={user?.password}
                 disabled={!editMode}
                 onChange={(e) => user.password = e.target.value}
             />
             <FormLabel>Gender</FormLabel>
             <RadioGroup row name="radio-row-buttons" onChange={(event) => user.gender = event.target.value}>
-                <FormControlLabel value={user.gender} control={<Radio disabled={!editMode}/>} label="Female"/>
-                <FormControlLabel value={user.gender} control={<Radio disabled={!editMode}/>} label="Male"/>
-                <FormControlLabel value={user.gender} control={<Radio disabled={!editMode}/>} label="Gender fluid"/>
-                <FormControlLabel value={user.gender} control={<Radio disabled={!editMode}/>} label="Transgender"/>
-                <FormControlLabel value={user.gender} control={<Radio disabled={!editMode}/>} label="Transgender man"/>
-                <FormControlLabel value={user.gender} control={<Radio disabled={!editMode}/>} label="Transgender woman"/>
-                <FormControlLabel value={user.gender} control={<Radio disabled={!editMode}/>} label="Non-Binary"/>
-                <FormControlLabel value={user.gender} control={<Radio disabled={!editMode}/>} label="Bigender"/>
-                <FormControlLabel value={user.gender} control={<Radio disabled={!editMode}/>} label="Agender"/>
-                <FormControlLabel value={user.gender} control={<Radio disabled={!editMode}/>} label="Other"/>
-
+                <FormControlLabel checked={user?.gender === "Female"} control={<Radio disabled={!editMode}/>} label="Female"/>
+                <FormControlLabel checked={user?.gender === "Male"} control={<Radio disabled={!editMode}/>} label="Male"/>
+                <FormControlLabel checked={user?.gender === "Gender fluid"} control={<Radio disabled={!editMode}/>} label="Gender fluid"/>
+                <FormControlLabel checked={user?.gender === "Transgender"} control={<Radio disabled={!editMode}/>} label="Transgender"/>
+                <FormControlLabel checked={user?.gender === "Transgender man"} control={<Radio disabled={!editMode}/>} label="Transgender man"/>
+                <FormControlLabel checked={user?.gender === "Transgender woman"} control={<Radio disabled={!editMode}/>} label="Transgender woman"/>
+                <FormControlLabel checked={user?.gender === "Non-Binary"} control={<Radio disabled={!editMode}/>} label="Non-Binary"/>
+                <FormControlLabel checked={user?.gender === "Bigender"} control={<Radio disabled={!editMode}/>} label="Bigender"/>
+                <FormControlLabel checked={user?.gender === "Agender"} control={<Radio disabled={!editMode}/>} label="Agender"/>
+                <FormControlLabel checked={user?.gender === "Other"} control={<Radio disabled={!editMode}/>} label="Other"/>
             </RadioGroup>
                 <Button color="primary" size="large" type="submit" variant="contained" hidden={!editMode} onClick={handleSubmit}>
                     Save

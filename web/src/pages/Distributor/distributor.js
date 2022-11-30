@@ -68,13 +68,15 @@ const Distributor = observer(() => {
                 }),
             });
             await res.json();
-            if (res.status) {
+            if (res.status === 201) {
                 setTitle("");
                 setDescription("");
                 setAddress("");
                 setMessage("Distributor added successfully");
+                window.alert(message);
             } else {
                 setMessage("Some error occured");
+                window.alert(message);
             }
         } catch (err) {
             console.log(err);

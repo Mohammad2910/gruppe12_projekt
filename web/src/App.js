@@ -33,7 +33,7 @@ function App() {
 const DefaultContainer = () => (
     <div>
         <div className="container">
-            <Navbar />
+            <Navbar/>
             <main>
                 <Routes>
 

@@ -4,23 +4,12 @@ class Footer extends Component {
     render() {
         return (
             <div className="container-fluid text-white p-3 bg-dark">
-                <div className="mt-3 ">
-                    <h3 className="text-center fw-bold">Want to Partner with us?</h3>
-                    <p className="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit ,<br/>
-                        Quos facilis sunt, ipsa dolor aliquam accusamus sint facere repudiandae?</p>
-                    <center>
-                        <button className="btn btn-block btn-outline-light">Get Started</button>
-                    </center>
-                    <hr className="mb-5"/>
-                </div>
                 <div className="row justify-content-around text-center text-md-start">
                     <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                         <h5 className="text-uppercase mb-4 font-weight-bold text-white">About Us</h5>
                         <hr className="mb-4"/>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid beatae doloremque dolorum,
-                            eligendi nisi numquam pariatur possimus rerum sit velit!</p>
+                        <p>We are a group of 5 software developers. We have made this application to help people navigate through the wilderness of medicinal cannabis.</p>
                     </div>
-
                     {/*<div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">*/}
                     {/*    <h5 className="text-uppercase mb-4 font-weight-bold text-white">Let Us Help</h5>*/}
                     {/*    <hr className="mb-4"/>*/}
