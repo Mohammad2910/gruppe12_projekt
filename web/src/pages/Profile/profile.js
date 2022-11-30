@@ -10,7 +10,6 @@ import {DesktopDatePicker, LocalizationProvider} from "@mui/x-date-pickers";
 import {AdapterDayjs} from "@mui/x-date-pickers/AdapterDayjs";
 
 const Profile = () => {
-    profileStore.fetchUser();
     let user = profileStore.user;
     const [editMode, setEditMode] = useState(false);
     const buttonHandler = () => {
