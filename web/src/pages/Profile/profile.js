@@ -39,7 +39,6 @@ const Profile = () => {
 
     return (
         <div>
-            <br/><br/>
             <h1>Din profil</h1>
             <br/>
             <Button variant="contained" onClick={buttonHandler} sx={{ m: 2, width: '20ch' }}>Redigér</Button>
