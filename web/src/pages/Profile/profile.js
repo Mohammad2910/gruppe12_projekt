@@ -18,6 +18,8 @@ const Profile = observer(() => {
     }
 
     let user = profileStore.user;
+    // Deep copy of user, in case user is in editmode and has changed values, which could compromise delete function
+    let originalUser = JSON.parse(JSON.stringify(user));
     const [editMode, setEditMode] = useState(false);
     const buttonHandler = () => {
         setEditMode(current => !current)
@@ -44,12 +46,30 @@ const Profile = observer(() => {
         }
     };
 
+    let handleDelete = async (e) => {
+        e.preventDefault();
+        try {
+            fetch('http://localhost:8080/api/users', {
+               method: 'DELETE',
+               body: JSON.stringify(originalUser),
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'}
+            }).then(function(response) {
+                alert('User deleted');
+                window.location.href = "/";
+            });
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
     return (
         <div>
             <h1>Your Profile</h1>
             <br/>
             <Button variant="contained" onClick={buttonHandler} sx={{ m: 2, width: '20ch' }}>Edit</Button>
-            <Button variant="contained" color="error" sx={{ m: 2, width: '20ch' }}>Delete</Button>
+            <Button variant="contained" onClick={handleDelete} color="error" sx={{ m: 2, width: '20ch' }}>Delete</Button>
             <TextField
                 margin="dense"
                 id="firstname"
