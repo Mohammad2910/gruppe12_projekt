@@ -82,7 +82,6 @@
 
         //TODO salt og hash password før det sendes til backend
         let response = postFormData(User);
-        alert('User created succesfully');
         setBirthday(dayjs());
         setFirstname("");
         setLastname("");
@@ -214,9 +213,7 @@ async function postFormData(User) {
         let res = await fetch('https://grp12.servecounterstrike.com/api/users', {
             method : 'POST',
             body: JSON.stringify(User),
-            headers: {"Content-Type" : "application/json"}
-        }).then(function(response) {
-            return response.json();
+            headers: {'Accept': 'application/json', "Content-Type" : "application/json"}
         });
 
         await res.json();
