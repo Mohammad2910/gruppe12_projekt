@@ -3,13 +3,13 @@ FROM node:18-slim AS REACT
 WORKDIR /app
 COPY /web/package.json  ./
 COPY /web/package-lock.json  ./
+RUN npm ci --force
 COPY /web/src ./src
 COPY /web/public ./public
 
 # ==== BUILD =====
 # Install dependencies (npm ci makes sure the exact versions in the lockfile gets installed)
 # RUN npm install --force
-RUN npm ci --force
 # Build the app
 RUN npm run build
 
