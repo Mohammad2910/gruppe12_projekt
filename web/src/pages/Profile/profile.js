@@ -49,7 +49,6 @@ const Profile = observer(() => {
             <h1>Your Profile</h1>
             <br/>
             <Button variant="contained" onClick={buttonHandler} sx={{ m: 2, width: '20ch' }}>Edit</Button>
-            <Button variant="contained" color="error" sx={{ m: 2, width: '20ch' }}>Delete</Button>
             <TextField
                 margin="dense"
                 id="firstname"
@@ -104,17 +103,17 @@ const Profile = observer(() => {
                 value={user?.username}
                 disabled={true}
             />
-            <TextField
-                margin="dense"
-                id="password"
-                label="Password"
-                type="name"
-                fullWidth
-                variant="standard"
-                value={user?.password}
-                disabled={!editMode}
-                onChange={(e) => user.password = e.target.value}
-            />
+            {/*<TextField*/}
+            {/*    margin="dense"*/}
+            {/*    id="password"*/}
+            {/*    label="Password"*/}
+            {/*    type="name"*/}
+            {/*    fullWidth*/}
+            {/*    variant="standard"*/}
+            {/*    value={user?.password}*/}
+            {/*    disabled={!editMode}*/}
+            {/*    onChange={(e) => user.password = e.target.value}*/}
+            {/*/>*/}
             <FormLabel>Gender</FormLabel>
             <RadioGroup row name="radio-row-buttons" onChange={(event) => user.gender = event.target.value}>
                 <FormControlLabel value="Female" checked={user?.gender === "Female"} control={<Radio disabled={!editMode}/>} label="Female"/>
